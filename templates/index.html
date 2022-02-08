@@ -1,0 +1,1094 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crexconnect home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'animate.min.css' %}">
+
+    
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'a163a54368a823e35afe3abeee793dc9ee8571b6';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+            font-family: cabin;
+        }
+
+
+        button:hover{
+            cursor: pointer;
+            color: #482ff7;
+            background-color: #475569;
+        }
+
+        .dive button:hover{
+            background-color: #475569;
+        }
+
+        a{
+            text-decoration: none;
+            color:#475569;
+        }
+
+
+
+        li{
+            list-style: none;
+        }
+
+        .header{
+            border-bottom: 1px solid #E2E8F0;
+            padding: 9px;
+        }
+
+        body{
+            padding: 5px;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #101010;
+            }
+
+             .nav-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-link{
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: #475569;
+                padding: 15px;
+            }
+
+            .nav-link:hover{
+                color: #482ff7;
+            }
+
+            .nav-logo {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #0052ff;
+            }
+
+      
+        .slidew{
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .first{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 50px;
+        }
+
+        .dive{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .shadow{
+            width: 50%;
+        }
+
+        .dive h1{
+            width: 250px;
+            font-size: 58px;
+            font-weight: 700;
+            line-height: 0.91;
+            padding-bottom: 5px;
+            font-family: CoinbaseDisplay, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .dive h3{
+            width: 400px;
+            font-size: 17px;
+            padding: 15px;
+        }
+
+        .dive button{
+            background-color: #0052ff;
+            width: 125px;
+            height: 45px;
+            border-radius: 5px;
+            font-weight: 800;
+            font-size: 18px;
+            color: white;
+        }
+
+        .pointer-emoji{
+                width: 30px;
+                margin: 5px;
+            }
+
+        .shadow img{
+            width: 100%;
+        }
+
+        .second{
+            width: 100%;
+            height: 450px;
+        }
+
+        .third{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .earn{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 0 10px 5px #E2E8F0;
+
+        }
+
+        .third h1{
+            width: 360px;
+            padding: 7px;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        .third p{
+            width: 350px;
+            border-top: 30px;
+            padding: 10px;     
+        }
+
+        .third button{
+            background-color: #0052ff;
+            width: 125px;
+            height: 44px;
+            border-radius: 5px;
+            font-weight: 800;
+            font-size: 15px;
+            color: white;
+            margin-right: 20px;
+        }
+
+        .bs{
+            display: flex;
+            width: 100%;
+        }
+
+        .bs img{
+            width: 100%;
+        }
+
+        .fourth{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fourth div{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fourth div h1{
+            font-size: 38px;
+            padding-top: 50px;
+        }
+
+        .fourth p{
+            font-size: 19px;
+            padding: 20px;
+            padding-bottom: 50px;
+        }
+
+        .fifth{
+            width: 100%;
+        }
+
+        .pin{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .pinc{
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: #f0f5fa;
+            border-radius: 45px;
+            border: 1px solid #0052ff;
+        }
+
+        .pinc p{
+            padding: 5px;
+        }
+
+        
+        .pinc img{
+            width: 75px;
+        }
+        
+        .ass{
+            width: 100%;
+        }
+
+        .asset{
+            width: 100%;
+        }
+
+        .cover{
+            width: 80px;
+            height: 28px;
+            background-color: white;
+            position: absolute;
+            margin-right: 470px;
+            margin-bottom: 460px;
+        }
+
+        .sixth{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .sixth h1{
+            font-size: 37px;
+            padding-top: 50px;
+        }
+
+        .sixth p{
+            font-size: 18px;
+            padding: 13px;
+        }
+
+        .seven{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .check{
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: #f0f5fa;
+            border-radius: 45px;
+            box-shadow: 0 0 10px 5px #E2E8F0;
+        }
+
+        .check p{
+            padding: 7px;
+        }
+
+        
+        .check img{
+            width: 135px;
+        }
+
+        .eight{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border: 2px solid #f0f5fa;
+            background-image: linear-gradient(180deg, #0051ffd5, #4574da );
+            color: whitesmoke; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        .eight h1{
+            font-size: 40px;
+            font-weight: 900;
+            padding-top: 35px;
+        }
+
+        .eight p{
+            font-size: 17px;
+            font-weight: 600;
+            padding-bottom: 35px;
+            padding-top: 6px;
+        }
+
+        .stats{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        footer{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: whitesmoke;
+                padding-top: 30px;
+                text-align: center;
+            }
+
+            .partners{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .partners div{
+                width: 20%;
+            }
+            .partners img{
+                width: 100%;
+            }
+            .partners div:nth-child(2){
+                width: 16%;
+            }
+
+            .endlogo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                width: 100%;
+            }
+            .endlogo div{
+                width: 100%;
+                color: #2a68ee;
+            }
+            .endlogo div:nth-child(2){
+                width: 5%;
+                display: none;
+            }
+
+            .endlogo img{
+                display: flex;
+                width: 20%;
+            }
+
+            .copyright{
+                padding: 5px;
+                font-size: 1.1rem;
+                color: #475569;
+            }
+
+
+
+
+        /*media querry*/
+
+
+            @media only screen and (max-width: 768px) {
+           
+       
+            /* nav section */
+
+            .header h1{
+             font-size: 1.5rem;
+             }
+             
+            .nav-menu {
+            position: fixed;
+            right: -100%;
+            top: 50px;
+            flex-direction: column;
+            background-color: #fff;
+            width: 40%;
+            z-index: 10;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-item {
+                margin: 2.5rem 0;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .navbar{
+                padding: 2px;
+            }
+
+            .nav-logo {
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: #0052ff;
+            }
+
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+
+            /* dive in section */
+            
+        .first{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .dive{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 30px;
+            
+        }
+
+        .shadow{
+            width: 20%;
+        }
+
+        .dive h1{
+            font-size: 29px;
+            font-weight: 780;
+            width: 240px;
+        }
+
+        .dive h3{
+            font-size: 14.5px;
+            width: 250px;
+        }
+
+        .dive button{
+            background-color: #0052ff;
+            width: 95px;
+            height: 35px;
+            border-radius: 17px;
+            font-weight: 700;
+            font-size: 12px;
+            color: white;
+        }
+
+        .shadow img{
+            width: 240px;
+        }
+
+        /* earn section */
+
+        .third{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .earn{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 8px 10px 10px #888888;
+            background-image: linear-gradient(110deg, #8aabf84b, #80cbe93b);
+            border-radius: 30px;
+            padding: 30px;
+        }
+
+        .bs{
+            display: flex;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .third h1{
+            width: 290px;
+            padding: 10px;
+            font-size: 35px;
+        }
+
+        .third p{
+            width: 280px;
+            border-top: 20px;
+            padding: 10px;
+            
+        }
+
+         .third button{
+            background-color: #0052ff;
+            width: 97px;
+            height: 35px;
+            border-radius: 17px;
+            font-weight: 650;
+            font-size: 11px;
+            color: white;
+        }
+
+        .second{
+            width: 100%;
+        }
+
+        .fourth{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 80px;
+            padding-top: 80px;
+            padding: 30px;
+        }
+
+        .fourth h1{
+            font-size: 32px;
+            line-height: 0.97;
+        }
+
+
+        /* fifth section */
+
+            .pin{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .pinc{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            background-image: linear-gradient(100deg, #43a5f531, #85e7eb21);
+            border-radius: 35px;
+            box-shadow: 8px 10px 10px #888888;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+        }
+
+        .pinc h3{
+            padding: 5px;
+        }
+        .pinc p{
+            padding-bottom: 30px;
+        }
+
+        .pinc img{
+            width: 120px;
+        }
+
+        /* sixth section */
+
+        .sixth{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        .sixth h1{
+            font-size: 32px;
+            line-height: 0.97;
+        }
+
+
+          /* seven section */
+        .seven{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+
+        .check{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 10px;
+            background-image: linear-gradient(110deg, #369bee4d, #20d9f13b);
+            border-radius: 45px;
+            box-shadow: 8px 10px 10px #888888;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+        }
+
+        .check p{
+            padding: 7px;
+        }
+
+        
+        .check img{
+            width: 135px;
+        }
+
+        /*section eight*/
+
+        .eight{
+            background-image: linear-gradient(180deg, #a5b5da0a, #e2e8f05b);
+            width: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 0;
+        }
+
+        .stats{
+            width: 110px;
+            height: 130px;
+            border-radius: 40px;
+            border: 1px solid #0051ff2c;
+            background-color: #E2E8F0;
+            color: rgb(24, 24, 24);
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 0 5px 2px #a5b5daab;
+        }
+
+        .stats h1{
+            font-size: 20px;
+        }
+        .stats p{
+            font-size: 12px;
+        }
+
+          /*footer*/
+
+          .copyright{
+                padding: 1px;
+                font-size: 0.9rem;
+                color: #475569;
+            }
+
+            .endlogo{
+                width: 100%;
+                display: flex;
+            }
+            .endlogo div{
+                width: 100%;
+                color: #2a68ee;
+            }
+            .endlogo div:nth-child(2){
+                width: 5%;
+                display: none;
+            }
+            .endlogo div:nth-child(3){
+                width: 5%;
+                display: none;
+            }
+
+
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+<header class="header">
+        <nav class="navbar">
+                <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'services' %}" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'signin' %}" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header>
+
+    <section class="slidew" style="height: 60px;"><!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" style="height: 60px;">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        new TradingView.MediumWidget(
+            {
+          "symbols": [
+            {
+              "proName": "FOREXCOM:NSXUSD",
+              "title": "US 100"
+            },
+            {
+              "proName": "FX_IDC:EURUSD",
+              "title": "EUR/USD"
+            },
+            {
+              "proName": "BITSTAMP:BTCUSD",
+              "title": "Bitcoin"
+            },
+            {
+              "proName": "BITSTAMP:ETHUSD",
+              "title": "Ethereum"
+            },
+            {
+              "description": "",
+              "proName": "BINANCE:SOLUSDT"
+            },
+            {
+              "description": "shib",
+              "proName": "BINANCE:SHIBUSDT"
+            },
+            {
+              "description": "gala",
+              "proName": "BINANCE:GALAUSDT"
+            },
+            {
+              "description": "bnb",
+              "proName": "BINANCE:BNBUSDT"
+            },
+            {
+              "description": "xrp",
+              "proName": "BINANCE:XRPUSDT"
+            },
+            {
+              "description": "apple",
+              "proName": "NASDAQ:AAPL"
+            },
+            {
+              "description": "tesla",
+              "proName": "NASDAQ:TSLA"
+            }
+          ],
+
+          "showSymbolLogo": true,
+          "colorTheme": "light",
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "locale": "en"
+        }
+        );
+          </script>
+        </div>
+        </section>
+
+
+    <section class="first">
+        <div class="dive">
+            <div><h1>Dive in your crypto portfolio</h1></div>
+            <div><h3>CrexConnect is the easiest place to buy and invest cryptocurrency. Sign up and get started today.</h3></div>
+            <div><img class="pointer-emoji animate__animated animate__shakeY animate__delay-3s animate__infinite animate__slower" src="https://emojigraph.org/media/facebook/backhand-index-pointing-down-medium-dark-skin-tone_1f447-1f3fe.png"></div>
+            <div  class="animate__animated animate__shakeX animate__delay-1s animate__repeat-2"><a href="signup.html"><button>Get started</button></a></div>
+        </div>
+        <div class="shadow"><img src="https://miro.medium.com/max/1204/0*Yptvfuy-KY9XWMiN.png" alt=""></div>
+    </section>
+
+
+    <section class="second">
+       <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_25ca8"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.MediumWidget(
+    {
+    "symbols": [
+      [
+        "Apple",
+        "AAPL"
+      ],
+      [
+        "Google",
+        "GOOGL"
+      ],
+      [
+        "Microsoft",
+        "MSFT"
+      ],
+      [
+        "Bitcoin",
+        "COINBASE:BTCUSD|12M"
+      ],
+      [
+        "Gold",
+        "OANDA:XAUUSD|12M"
+      ]
+    ],
+    "chartOnly": false,
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "colorTheme": "light",
+    "gridLineColor": "rgba(164, 194, 244, 0)",
+    "fontColor": "#787B86",
+    "isTransparent": false,
+    "autosize": true,
+    "showFloatingTooltip": true,
+    "showVolume": true,
+    "scalePosition": "no",
+    "scaleMode": "Normal",
+    "fontFamily": "Trebuchet MS, sans-serif",
+    "noTimeScale": false,
+    "chartType": "area",
+    "lineColor": "#2962FF",
+    "bottomColor": "rgba(41, 98, 255, 0)",
+    "topColor": "rgba(41, 98, 255, 0.3)",
+    "container_id": "tradingview_25ca8"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+    </section>
+
+
+    <section class="third">
+        <div class="earn animate__animated animate__flipInY animate__delay-2s animate__duration-4s animate__slow">
+            <div><h1>Earn up to $1000 worth of crypto</h1></div>
+            <div><p>Discover unending possibilities in the crypto-world when you join our trading platform</p></div>
+            <div><a href="signup.html"><button class="animate__animated animate__shakeX animate__delay-5s animate__repeat-2">Start earning</button></a></div>
+        </div>
+        <div class="bs"><img src="https://i.pinimg.com/originals/fc/71/63/fc71635c7f1b09ed30413f59bb749582.gif" alt=""></div>
+    </section>
+
+    <section class="fourth">
+       <div><h1>Create your cryptocurrency portfolio today</h1></div>
+       <div><p>CrexConnect has a variety of features that make it the best place to start trading</p></div>
+    </section>
+
+    <section class="fifth">
+        <div class="pin">
+            <div class="pinc animate__animated animate__flipInY animate__delay-s" style="animation-delay: 3.8s;">
+                <div><img src="https://images.pngnice.com/download/2007/Facebook-Verified-Badge-Transparent-PNG.png" alt=""></div>
+                <div><h3>Manage your portfolio</h3></div>
+                <div><p>Buy and sell popular digital currencies, keep track of them in the one place.</p></div>
+            </div>
+            <div class="pinc animate__animated animate__flipInY animate__delay-s" style="animation-delay: 5s;">
+                <div><img src="https://images.pngnice.com/download/2007/Facebook-Verified-Badge-Transparent-PNG.png" alt=""></div>
+                <div><h3>Recurring buys</h3></div>
+                <div><p>Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly.</p></div>
+            </div>
+            <div class="pinc animate__animated animate__flipInY animate__delay-s" style="animation-delay: 6.2s;">
+                <div><img src="https://images.pngnice.com/download/2007/Facebook-Verified-Badge-Transparent-PNG.png" alt=""></div>
+                <div><h3>Friendly UI Design</h3></div>
+                <div><p>Get the best insights and user experience, xplore unending possibilities at ease, surf like a pro.</p></div>
+            </div>
+            
+        </div>
+        <div class="ass"><div class="cover"></div><img class="asset" src="https://assets.coinbase.com/assets/coinbase-app.3b0bfd4cb6b7a7614c1e18472187f6b9.webp" alt=""></div>
+    </section>
+    <section class="sixth">
+        <div><h1>The most trusted cryptocurrency platform</h1></div>
+        <div><p>Here are a few reasons why you should choose CrexConnect</p></div>
+    </section>
+    <section class="seven">
+        <div class="check animate__animated animate__flipInY animate__delay-s" style="animation-delay: 6.8s;">
+            <div><img src="https://images.pngnice.com/download/2007/Facebook-Verified-Badge-Transparent-PNG.png" alt=""></div>
+            <div><h3>Secure storage</h3></div>
+            <div><p>We store the vast majority of the digital assets in secure offline storage.</p></div>
+        </div>
+        <div class="check animate__animated animate__flipInY animate__delay-s" style="animation-delay: 8s;">
+            <div><img src="https://images.pngnice.com/download/2007/Facebook-Verified-Badge-Transparent-PNG.png" alt=""></div>
+            <div><h3>Protected by insurance</h3></div>
+            <div><p class="center">CrexConnect maintains crypto insurance and all USD cash balances are covered by FDIC insurance, up to a maximum of $250,000.</p></div>
+        </div>
+        <div class="check animate__animated animate__flipInY animate__delay-s " style="animation-delay: 9.2s;">
+            <div><img src="https://images.pngnice.com/download/2007/Facebook-Verified-Badge-Transparent-PNG.png" alt=""></div>
+            <div><h3>Industry best practices</h3></div>
+            <div><p>CrexConnect supports a variety of the most popular digital currencies.</p></div>
+        </div>
+    </section>
+    <section class="eight">
+        <div class="stats animate__animated animate__flipInY animate__delay-1s animate__ animate__slower">
+            <div><h1>$327B</h1></div>
+            <div><p>Quarterly volume traded</p></div>
+        </div>
+        <div class="stats animate__animated animate__flipInX animate__delay-4s animate__infinite animate__slower">
+            <div><h1>100+</h1></div>
+            <div><p>Countries supported</p></div>
+        </div>
+        <div class="stats animate__animated animate__flipInY animate__delay-1s animate__ animate__slower">
+            <div><h1>100+M</h1></div>
+            <div><p>Verified users</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="partners">
+            <div><img src="https://assets.website-files.com/5cbbb0da37d84e4838578f45/5cc08e530a5c750836baed0e_dark%20blue.svg" alt=""></div>
+            <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Coinbase.png/800px-Coinbase.png" alt=""></div>
+            <div><img src="https://cdn.anytrack.io/affiliate-networks/logos/tradingview.png" alt=""></div>
+            <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Binance_logo.svg/632px-Binance_logo.svg.png" alt=""></div>
+        </div>
+    
+        <div class="endlogo">
+            <div><h1>CrexConnect</h1></div>
+            <div><a href="https://t.me/CrexSupport"><img class="btele" src="https://mobil-lubricants.brenntag.com/released-images/whatsapp_brenntag_mobil_1_lubricants_motor_oil_engine_car_truck-3.png" alt=""></a></div>
+           
+        </div>
+    
+        <div class="copyright">
+            <p>Copyright 2017 CrexConnect. All Rights Reserved</p>
+        </div>
+     </footer>
+    
+     <script>
+        const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    
+    const navLink = document.querySelectorAll(".nav-link");
+    
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+    
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+    </script>
+</body>
+<script>
+            const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+</script>
+</html>

@@ -1,0 +1,145 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+
+  <!-- Billboarrd -->
+  <main class="billboard" style="background-image: linear-gradient(102deg, rgba(5, 11, 59, 0.411) 0%, rgba(0, 11, 25, 0.849) 100%), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80); height: 30vh;">
+    <div class="billboard-content">
+      <h1 class="billboard-header" >Forgot Password</h1>
+      <!-- <p class="billboard-text">We trade Cryptocurrencies, Forex, Stocks and commodities with the best financial experts.</p> -->   
+    </div>
+  </main>
+  <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+
+  <!-- Contact Us -->
+  <div class="form signup">
+    <form id="log-in" action="{% url 'login' %}" method="POST">
+
+      <!-- {% csrf_token%} -->
+
+      <h2 class="form-header">Please Enter Your Email and Recover Your Password</h2>
+
+      <!-- {% include '_alert.html' %} -->
+
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" placeholder="example@gmail.com"><br><br>
+
+
+      <input id="form-btn" type="submit" value="RECOVER PASSWORD">
+
+  </form>
+  </div>
+  
+  <!-- Why Invest with us -->
+  <section class="why-invest">
+    <h2 class="main-heading center">Why Invest With Us</h2>
+    <p class="sub-heading center">Create an account and get a 5% bonus of your first deposit</p>
+
+    <!-- card group -->
+    <div>
+      <!-- group 1 -->
+      <div class="row">
+        <!-- Card Unit -->
+        <div class="usp">
+          <div class="usp-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-file-earmark-lock2" viewBox="0 0 16 16">
+              <path d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0zM7 7v1h2V7a1 1 0 0 0-2 0z"/>
+              <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+            </svg>
+          </div>
+          <div class="usp-text">
+            <p class="usp-headingtext">100% Secured</p>
+            <p class="usp-othertext">Our Platform is 100% secured and can't be attacked by hackers</p>
+          </div>
+        </div>
+
+        <div class="usp">
+          <div class="usp-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-lightning" viewBox="0 0 16 16">
+              <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1H6.374z"/>
+            </svg>
+          </div>
+          <div class="usp-text">
+            <p class="usp-headingtext">Fast Withdrawal</p>
+            <p class="usp-othertext">Instant Withdrawal to your Wallet Address</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Card Unit -->
+        <div class="usp">
+          <div class="usp-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-currency-exchange" viewBox="0 0 16 16">
+              <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
+            </svg>
+          </div>
+          <div class="usp-text">
+            <p class="usp-headingtext">Guranteed Profit</p>
+            <p class="usp-othertext">Trades are carried out professional and experienced traders</p>
+          </div>
+        </div>
+
+        <div class="usp">
+          <div class="usp-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-headset" viewBox="0 0 16 16">
+              <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+            </svg>
+          </div>
+          <div class="usp-text">
+            <p class="usp-headingtext">24/7 Contact</p>
+            <p class="usp-othertext">We are available 24/7 to meet your need and help you with any issue that may come up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+  <!-- Investment Packages -->
+  <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
+  <coingecko-coin-compare-chart-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="main-heading center">Testimonies from Investors</h2>
+    
+    <div class="testimony-group">
+      <div class="testimony">
+        <div class="testimony-image">
+          image
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Richard Hendricks</p>
+          <p class="testimony-location">USA</p>
+          <p class="testimony-details-text">Prime Investment has helped me to achieve financial freedom, now i can travel the world.</p>
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          image
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Abraham Karabo</p>
+          <p class="testimony-location">South Africa</p>
+          <p class="testimony-details-text">After Losing money trading myself Prime Investment has helped me to make over $100,000 dollars </p>
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          image
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Matthew Scotch</p>
+          <p class="testimony-location">USA</p>
+          <p class="testimony-details-text">I started with a thousand dollars now I have 20,000 all thanks to Prime Investment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta -->
+  {% endblock %}

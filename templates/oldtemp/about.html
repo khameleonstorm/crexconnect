@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<head>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>About | FX Pro</title>
+
+</head>
+
+  <!-- Billboarrd -->
+  <main class="billboard" style="background-image: linear-gradient(102deg, rgba(5, 11, 59, 0.411) 0%, rgba(0, 11, 25, 0.849) 100%), url(https://images.unsplash.com/photo-1616156027751-fc9a850fdc9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80); height: 50vh;">
+    <div class="billboard-content">
+      <h1 class="billboard-header">ABOUT US</h1>
+    </div>
+  </main>
+  <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+
+  <!-- About us -->
+  <section class="about">
+    <div class="about-group">
+      <h2 class="main-heading mb">About FX Pro Investment</h2>
+
+      <div class="about-text">
+        <p class="text">
+          We are a private cryptocurrency investment company based and registered in the UK since 2015. We provide lucrative investment services to our clients and partners. We trade Cryptocurreny, Forex and Stock. With investments in Bonds, Futures and Real Estate. We are dedicated to help our clients achieve financial freedom through risk-free trading because  a lot of people found it difficult to trade due to price volatility but for us "Volatility Is Our Opportunity" and we started putting profits back in to trading to gain more return. Money makes more money with perfect strategy. <br> <br> Our experts have extremely rich experience in working on financial markets, stock and private exchanges. This means that we don't have any risk - all your money is in the hands of professionals who save and multiply it every day. <br> <br> At the same time, we do not stop experimenting and develop our own financial strategies: FX Pro Investment finds a better uses for the money to extract maximum profits. Choosing us, you should be fully aware that you choose the safest direction of investment and trust your funds in the hands of professional financial managers. Today Prime Trade is opening up new opportunities also for professional investors and already working with many of them. <br> <br> We also invest own money with you. It is no secret that today many companies to attract funds to conduct an aggressive trade with high risk. However, it is not our way. We always share our assets and risk involved in trading as well. We offer what we use ourselves.  
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="started">
+    <p class="main-heading center">Get Started</p>
+
+    <div class="starting-steps">
+      <div class="step-card">
+        <div class="step-svg">
+          <img src="https://cdn-icons-png.flaticon.com/512/1047/1047690.png" alt="">
+        </div>
+        <h4 class="step-heading">Create Your Account</h4>
+        <p class="start-text">Click on Register and fill the form to create your account.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-svg">
+          <img src="https://cdn-icons-png.flaticon.com/512/4380/4380131.png" alt="">
+        </div>
+        <h4 class="step-heading">Fund Your Investment</h4>
+        <p class="start-text">Select an Investment plan and make a Deposit to your FX Pro Wallet address.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-svg">
+          <img src="https://cdn-icons-png.flaticon.com/512/980/980440.png" alt="">
+        </div>
+        <h4 class="step-heading">Start Earning</h4>
+        <p class="start-text">After Selecting an investment plan watch your capital grow daily.</p>
+      </div>
+    </div>
+    
+  </section>
+  <div class="image-gallery">
+    <h2 class="main-heading center mb">Our Gallery</h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://www.linkpicture.com/q/photo2_1.jpg" alt=""></div>
+  
+        <div class="swiper-slide"><img src="https://www.linkpicture.com/q/photo3.jpg" alt=""></div>
+  
+        <div class="swiper-slide"><img src="https://www.linkpicture.com/q/photo1_1.jpg" alt=""></div>
+      </div>
+  
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+  <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
+  <coingecko-coin-compare-chart-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="main-heading center">Testimonies from Investors</h2>
+    
+    <div class="testimony-group">
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="https://images.unsplash.com/photo-1624245536912-02a7570957c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Alfie Wilson</p>
+          <p class="testimony-location">United Kingdom</p>
+          <p class="testimony-details-text">Prime Trade has helped me to achieve financial freedom, now i can travel the world.</p>
+        </div>
+      </div>
+
+      I have no fear at all when investing with FX PRO Investment because I know that my funds are insured and I will always get paid. More Power!
+
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="https://images.unsplash.com/photo-1571677463002-bf791be6a9e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Naomi Baker</p>
+          <p class="testimony-location">USA</p>
+          <p class="testimony-details-text">I just received $4,500 on my bitcoin wallet, my first PLUS earning. I'll keep on investing. Thank you so much! </p>
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="https://images.unsplash.com/photo-1612299065617-f883adb67bd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Arno Oratile</p>
+          <p class="testimony-location">South Africa</p>
+          <p class="testimony-details-text">I started with a thousand dollars now I have $20,000 all thanks to Prime Trade</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  {% endblock %}

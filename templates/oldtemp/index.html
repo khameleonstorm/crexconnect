@@ -1,0 +1,321 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<head>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+<title>Home | FX Pro</title>
+</head>
+
+<body>
+  <!-- Billboard -->
+  <main class="billboard bill2" style="background-image: linear-gradient( 102deg, rgba(4, 8, 36, 0.534) 0%, rgba(0, 11, 25, 0.849) 100%), url(https://c4.wallpaperflare.com/wallpaper/123/513/226/bitcoin-cash-coins-computer-wallpaper-preview.jpg); background-repeat: no-repeat; background-size: cover;">
+    <div class="billboard-content content-2">
+      <h1 class="billboard-header" data-aos="fade-down" data-aos-duration="1000">Multiply your assest with invesment you can trust.</h1>
+      <p class="billboard-text" data-aos="fade-up" data-aos-duration="1000">FX Pro offers opportunities to grow your assets, with our reliable and trusted trading platform.</p>
+      
+      <a href="{% url 'signin' %}" class="btn btn-bill" data-aos="fade-up" data-aos-duration="1000">Get Started</a>
+    </div>
+  </main>
+  <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="" locale="en"></coingecko-coin-price-marquee-widget>
+
+  <!-- Investment Packages -->
+  <section class="investments">
+    <h2 class="main-heading" style="color: #121d33;">Investment Plans</h2>
+    <p class="sub-heading">Investment plans for our members.</p>
+
+    <div class="invest-group">
+      <div class="investment-plan">
+        <div class="invest-center">
+          <p class="invest-type">Starter</p>
+          <p class="invest-percent">25%</p>
+          <div class="invest-p">
+            <p class="invest-return">Time - 48 Hrs</p>
+            <!-- <p>Return - $2000</p> -->
+            <p>minimum - $200</p>
+            <p>maximum - $999</p>
+          </div>
+          
+        </div>
+        <!-- <a href="{% url 'signin' %}" class="btn btn-invest">Invest Now</a> -->
+      </div>
+
+      <div class="investment-plan">
+        <div class="invest-center">
+          <p class="invest-type">Plus</p>
+          <p class="invest-percent">45%</p>
+          <div class="invest-p">
+            <p class="invest-return">Time - 48 Hrs</p>
+            <!-- <p>For 4 times</p> -->
+            <p>minimum - $1,000</p>
+            <p>minimum - $4,999</p>
+          </div>
+          
+        </div>
+        <!-- <a href="{% url 'signin' %}" class="btn btn-invest center">Invest Now</a> -->
+      </div>
+
+      <div class="investment-plan">
+        <div class="invest-center">
+          <p class="invest-type">Premium</p>
+          <p class="invest-percent">50%</p>
+          <div class="invest-p">
+            <p class="invest-return">Time - 48 Hrs</p>
+            <!-- <p>For 4 times</p> -->
+            <p>minimum - $5,000</p>
+            <p>maximum - $9,999</p>
+          </div>
+        </div>
+        <!-- <a href="{% url 'signin' %}" class="btn btn-invest center">Invest Now</a> -->
+      </div>
+      
+      <div class="investment-plan">
+        <div class="invest-center">
+          <p class="invest-type">Professional</p>
+          <p class="invest-percent">65%</p>
+          <div class="invest-p">
+            <p class="invest-return">Time - 48 hrs</p>
+            <p>minimum - $10,000</p>
+            <p>maximum - $50,000</p>
+          </div>
+        </div>
+        <!-- <a href="{% url 'signin' %}" class="btn btn-invest center">Invest Now</a> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="why-invest">
+    
+    <div class="why-section">
+      <div class="why-main-text">
+        <h2 class="main-heading">Why FX Pro</h2>
+        <p>FX Pro Investment is an  online cryptocurrency investment company  based and registered in the UK since 2015. We provide lucrative investment services to our clients and partners. We trade Cryptocurreny, Forex and Stock with investments in Bonds, Futures and Real Estate. We are dedicated to making good use of our clients investments and return profit in 48hrs.</p>
+      </div>
+
+      <!-- card group -->
+      <div class="why-class-cards">
+        <!-- group 1 -->
+        <div class="row">
+          <!-- Card Unit -->
+          <div class="usp">
+            <div class="usp-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" width="100%" height="100%" fill="" viewBox="0 0 24 24" stroke="">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <p class="usp-headingtext">100% Secured</p>
+              <p class="usp-othertext">Our Platform is 100% secured and can't be attacked by hackers</p>
+            </div>
+          </div>
+
+          <!-- <div class="usp">
+            <div class="usp-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" width="100%" height="100%" fill="" viewBox="0 0 24 24" stroke="">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <p class="usp-headingtext">24/7 Contact</p>
+              <p class="usp-othertext">We are available 24/7 to meet your need and help you with any issue that may come up.</p>
+            </div>
+          </div> -->
+
+          <div class="usp">
+            <div class="usp-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="" viewBox="0 0 24 24" stroke="">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <p class="usp-headingtext">Guranteed Profit</p>
+              <p class="usp-othertext">Trades are carried out by professional and experienced traders</p>
+            </div>
+          </div>
+
+          <div class="usp">
+            <div class="usp-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" width="100%" height="100%"  fill="" viewBox="0 0 24 24" stroke="">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <p class="usp-headingtext">Instant Withdrawal</p>
+              <p class="usp-othertext">Withdraw your earnings quickly and easily different withdrawal methods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   </div class="widget">
+    <iframe class="iframe" frameborder=0 height=500 width=100% scrolling=no src='https://s.tradingview.com/embed-widget/crypto-mkt-screener/?locale=in#%7B%22width%22%3A1115%2C%22height%22%3A490%2C%22defaultColumn%22%3A%22overview%22%2C%22screener_type%22%3A%22crypto_mkt%22%2C%22displayCurrency%22%3A%22USD%22%2C%22colorTheme%22%3A%22light%22%2C%22market%22%3A%22crypto%22%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22kryptotrade.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22cryptomktscreener%22%7D"'></iframe>
+
+  </div>
+
+
+
+  <!-- Statistics Section -->
+  <section class="statistics" style="background-image: linear-gradient( 102deg, rgba(4, 8, 36, 0.679) 0%, rgba(0, 11, 25, 0.926) 100%), url(https://www.jbs.cam.ac.uk/wp-content/uploads/2020/05/2020-news-new-interactive-bitcoin-mining-map-883x432-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <!-- Statistics Group -->
+    <div class="stat-group">
+      <!-- Single Statistics -->
+      <div class="stat">
+        <div class="stat-details">
+          <div class="stat-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+              <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+            </svg>
+          </div>
+          <p class="stat-figure">10,000+</p>
+        </div>
+        <p class="stat-name">Active Users</p>
+      </div>
+
+      <div class="stat">
+        <div class="stat-details">
+          <div class="stat-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            </svg>
+          </div>
+          <p class="stat-figure">7 Years</p>
+        </div>
+        <p class="stat-name">Experience</p>
+      </div>
+
+      <div class="stat">
+        <div class="stat-details">
+          <div class="stat-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+              <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+            </svg>
+          </div>
+          <p class="stat-figure">$2.4 M</p>
+        </div>
+        <p class="stat-name">Deposits</p>
+      </div>
+
+      <div class="stat">
+        <div class="stat-details">
+          <div class="stat-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+              <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+            </svg>
+          </div>
+          <p class="stat-figure">$4.5 M</p>
+        </div>
+        <p class="stat-name">Withdrawal</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="started">
+    <p class="main-heading center">Get Started</p>
+
+    <div class="starting-steps">
+      <div class="step-card">
+        <div class="step-svg">
+          <img src="https://cdn-icons-png.flaticon.com/512/1047/1047690.png" alt="">
+        </div>
+        <h4 class="step-heading">Create Your Account</h4>
+        <p class="start-text">Click on Register and fill the form to create your account.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-svg">
+          <img src="https://cdn-icons-png.flaticon.com/512/4380/4380131.png" alt="">
+        </div>
+        <h4 class="step-heading">Fund Your Investment</h4>
+        <p class="start-text">Select an Investment plan and make a Deposit to your FX Pro Wallet address.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-svg">
+          <img src="https://cdn-icons-png.flaticon.com/512/980/980440.png" alt="">
+        </div>
+        <h4 class="step-heading">Start Earning</h4>
+        <p class="start-text">After Selecting an investment plan watch your capital grow daily.</p>
+      </div>
+    </div>
+    
+  </section>
+  
+  <div class="widget">
+    <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+
+    <div style="height:560px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;- FX Pro</div></div>
+  </div>
+  
+
+  <div class="image-gallery">
+    <h2 class="main-heading center mb">Our Gallery</h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://www.linkpicture.com/q/photo2_1.jpg" alt=""></div>
+  
+        <div class="swiper-slide"><img src="https://www.linkpicture.com/q/photo3.jpg" alt=""></div>
+  
+        <div class="swiper-slide"><img src="https://www.linkpicture.com/q/photo1_1.jpg" alt=""></div>
+      </div>
+  
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+  
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="main-heading center mb">Testimonies from Investors</h2>
+    
+    <div class="testimony-group">
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Alfie Wilson</p>
+          <p class="testimony-location">United Kingdom</p>
+          <p class="testimony-details-text">FX Pro Investment has helped me to achieve financial freedom, now i can travel the world.</p>
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="https://images.unsplash.com/photo-1571677463002-bf791be6a9e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Naomi Baker</p>
+          <p class="testimony-location">USA</p>
+          <p class="testimony-details-text">I just received $4,500 on my bitcoin wallet, my first PLUS earning. I'll keep on investing. Thank you so much!  </p>
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="">
+        </div>
+        <div class="testimony-details">
+          <p class="testimony-name">Arno Oratile</p>
+          <p class="testimony-location">South Africa</p>
+          <p class="testimony-details-text"> I have no fear when investing with FX PRO Investment because I know that my funds are insured and I will always get paid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  {% endblock %}

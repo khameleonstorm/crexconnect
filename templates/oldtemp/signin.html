@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+<head>
+  
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <title>Sign In | FX Pro</title>
+</head>
+
+<!-- style="background-image: linear-gradient(102deg, rgba(5, 11, 59, 0.411) 0%, rgba(0, 11, 25, 0.849) 100%), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80); height: 30px;" -->
+
+
+  <!-- Billboarrd -->
+  <main class="billboard" style="background-color: #121d33;">
+
+  </main>
+
+  <!-- Contact Us -->
+  <div class="form signup" style="margin: 40px auto;">
+    <form id="log-in" method="POST" action="{% url 'signin' %}">
+
+      {% csrf_token%}
+
+      <h2 class="form-header">Login to your Account</h2>
+      {% include '_alert.html' %}
+
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" placeholder="example@gmail.com" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" name="password" id="password" required>
+      <i class="bi bi-eye" id="togglePassword"></i>
+
+      <input id="form-btn" type="submit" value="Sign In">
+      <p style="color: black; font-size: 1.4rem; margin-top: 10px; ">don't have an account? <a href="{% url 'signup' %}">register now</a></p>
+
+  </form>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  {% endblock %}

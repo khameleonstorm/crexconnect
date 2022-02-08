@@ -1,0 +1,348 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content%}
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dashboard2.css' %}">
+  <title>My Dashboard | FX Pro</title>
+</head>
+
+  <!-- About us -->
+  <div class="dashboard">
+    <div class="user">
+      <div id="menuButton" onclick="openNav()"><i class="fas fa-bars"></i></div>
+
+      <div class="user-icon">
+        <div class="svg"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg></div>
+        <p class="username">Welcome <strong>{{ user.first_name}}</strong></p>
+      </div>
+    </div>
+    <div class="balance-group">
+
+      <div class="balance">
+        <div class="amount-group">
+          <div class="amount-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+              <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+            </svg>
+          </div>
+          <div class="amount">$ {{ user.balance.account_balance }}
+            <div class="amount-type">
+              <p>Account Balance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="balance">
+        <div class="amount-group">
+          <div class="amount-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+              <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+            </svg>
+          </div>
+          <div class="amount">$ {{ user.balance.bonus_balance }}
+            <div class="amount-type">
+              <p>Bonus Balance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="balance">
+        <div class="amount-group">
+          <div class="amount-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+              <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+            </svg>
+          </div>
+          <div class="amount">$ {{ user.balance.total_balance }}
+            <div class="amount-type">
+              <p> Profit Balance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="balance">
+        <div class="amount-group">
+          <div class="amount-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+              <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+            </svg>
+          </div>
+          <div class="amount">$ {{ user.balance.profit_balance }}
+            <div class="amount-type">
+              <p> Profit Balance</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      
+    </div>
+
+    <div class="status-section">
+      <div class="status-group">
+
+        <div class="status">
+          <p class="status-header">Deposit Status</p>
+          <div class="status-details">
+            <p class="status-details--type">Active Deposit</p>
+            <p class="status-details--amount">${{user.balance.active_deposit}}</p>
+          </div>
+          <hr>
+  
+          <div class="status-details">
+            <p class="status-details--type">Last Deposit</p>
+            <p class="status-details--amount">${{user.balance.last_deposit}}</p>
+          </div>
+          <hr>
+  
+          <div class="status-details">
+            <p class="status-details--type">Total Deposit</p>
+            <p class="status-details--amount">${{user.balance.total_deposit}}</p>
+          </div>
+          <hr>
+        </div>
+
+        <div class="status">
+          <p class="status-header">Withdrawal Status</p>
+          <div class="status-details">
+            <p class="status-details--type">Pending Withdrawal</p>
+            <p class="status-details--amount">${{ user.balance.pending_withdrawal }}</p>
+          </div>
+          <hr>
+  
+          <div class="status-details">
+            <p class="status-details--type">Last Withdrawal</p>
+            <p class="status-details--amount">${{user.balance.last_withdrawal}}</p>
+          </div>
+          <hr>
+
+  
+          <div class="status-details">
+            <p class="status-details--type">Total Wihtdrawal</p>
+            <p class="status-details--amount">${{user.balance.total_withdrawal}}</p>
+          </div>
+          <hr>
+
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="tradingview-widget-container" style="margin:30px 0px 10px 0px;">
+        <div id="tradingview_f933e"></div>
+        <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text"></span> <span class="blue-text">Personal trading chart</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget(
+        {
+        "width": "100%",
+        "height": "550",
+        "symbol": "COINBASE:BTCUSD",
+        "interval": "1",
+        "timezone": "Etc/UTC",
+        "theme": 'dark',
+        "style": "9",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true,
+        "calendar": false,
+        "studies": [
+          "BB@tv-basicstudies"
+        ],
+        "container_id": "tradingview_f933e"
+      }
+        );
+        </script>
+      </div>
+                              
+    </div>
+
+                                   
+      <div class="white-box" style="height: 450x;">
+      <!-- TradingView Widget BEGIN -->
+    </div>
+  
+    <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_a9422"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by FX Pro</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": "100%",
+    "height": 610,
+    "symbol": "NASDAQ:AAPL",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "allow_symbol_change": true,
+    "container_id": "tradingview_a9422"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text">Financial Markets</span></a> by FX Pro</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "light",
+  "dateRange": "12M",
+  "showChart": true,
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "showFloatingTooltip": false,
+  "width": "100%",
+  "height": "660",
+  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "scaleFontColor": "rgba(120, 123, 134, 1)",
+  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+  "tabs": [
+    {
+      "title": "Indices",
+      "symbols": [
+        {
+          "s": "FOREXCOM:SPXUSD",
+          "d": "S&P 500"
+        },
+        {
+          "s": "FOREXCOM:NSXUSD",
+          "d": "Nasdaq 100"
+        },
+        {
+          "s": "FOREXCOM:DJI",
+          "d": "Dow 30"
+        },
+        {
+          "s": "INDEX:NKY",
+          "d": "Nikkei 225"
+        },
+        {
+          "s": "INDEX:DEU30"
+        },
+        {
+          "s": "FOREXCOM:UKXGBP",
+          "d": "UK 100"
+        }
+      ],
+      "originalTitle": "Indices"
+    },
+    {
+      "title": "Futures",
+      "symbols": [
+        {
+          "s": "CME_MINI:ES1!",
+          "d": "S&P 500"
+        },
+        {
+          "s": "CME:6E1!",
+          "d": "Euro"
+        },
+        {
+          "s": "COMEX:GC1!",
+          "d": "Gold"
+        },
+        {
+          "s": "NYMEX:CL1!",
+          "d": "Crude Oil"
+        },
+        {
+          "s": "NYMEX:NG1!",
+          "d": "Natural Gas"
+        },
+        {
+          "s": "CBOT:ZC1!",
+          "d": "Corn"
+        }
+      ],
+      "originalTitle": "Futures"
+    },
+    {
+      "title": "Bonds",
+      "symbols": [
+        {
+          "s": "CME:GE1!",
+          "d": "Eurodollar"
+        },
+        {
+          "s": "CBOT:ZB1!",
+          "d": "T-Bond"
+        },
+        {
+          "s": "CBOT:UB1!",
+          "d": "Ultra T-Bond"
+        },
+        {
+          "s": "EUREX:FGBL1!",
+          "d": "Euro Bund"
+        },
+        {
+          "s": "EUREX:FBTP1!",
+          "d": "Euro BTP"
+        },
+        {
+          "s": "EUREX:FGBM1!",
+          "d": "Euro BOBL"
+        }
+      ],
+      "originalTitle": "Bonds"
+    },
+    {
+      "title": "Forex",
+      "symbols": [
+        {
+          "s": "FX:EURUSD"
+        },
+        {
+          "s": "FX:GBPUSD"
+        },
+        {
+          "s": "FX:USDJPY"
+        },
+        {
+          "s": "FX:USDCHF"
+        },
+        {
+          "s": "FX:AUDUSD"
+        },
+        {
+          "s": "FX:USDCAD"
+        }
+      ],
+      "originalTitle": "Forex"
+    }
+  ]
+}
+  </script>
+</div>
+
+</div> 
+
+<!-- TradingView Widget END -->
+  {% endblock %}

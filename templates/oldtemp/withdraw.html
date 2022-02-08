@@ -1,0 +1,138 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content%}
+<head>
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="{% static 'css/withdraw.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/sign.css' %}"> -->
+  <title>Prime Trade | Withdraw to your Wallet</title>
+</head>
+
+  <div class="dashboard">
+    <div class="user">
+      <div id="menuButton" onclick="openNav()"><i class="fas fa-bars"></i></div>
+
+      <div class="user-icon">
+        <div class="svg"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg></div>
+        <p class="username">{{ user.first_name}} {{user.last_name}}</p>
+      </div>
+    </div>
+
+  <div>
+    <p class="dashboard-header">Request For Withdrawal</p>
+  </div>
+  {% include '_alert.html' %}
+
+
+  <div class="withdraw_group">
+    <div class="withdrawal-card">
+      <h2 class="withdrawal-type">Bitcoin</h2>
+      <div>
+        <div class="with-details">
+          <p>Minimum</p>
+          <p>$50</p>
+        </div>
+        <div class="with-details" >
+          <p>Charges</p>
+          <p>%0</p>
+        </div>
+
+        <div class="withdrawal-form">  
+          <form method="POST" action="{% url 'withdraw' %}">
+            {% csrf_token%}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="username" value="{{ user.username }}">
+            {% endif %}
+            <div class="form-group">
+              <label for="address">Amount</label>
+              <input type="text" name=amount required>
+            </div>
+            <div class="form-group">
+              <label for="address">Wallet Address</label>
+              <input type="text" name='wallet' required>
+            </div>
+            <input type="submit" value="Withdraw" name="bitcoin">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="withdrawal-card">
+      <h2 class="withdrawal-type">Paypal</h2>
+      <div>
+        <div class="with-details">
+          <p>Minimum</p>
+          <p>$50</p>
+        </div>
+        <div class="with-details" >
+          <p>Charges</p>
+          <p>$5</p>
+        </div>
+        <div class="withdrawal-form">  
+          <form method="POST" action="{% url 'withdraw' %}">
+            {% csrf_token%}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="username" value="{{ user.username }}">
+            {% endif %}
+            <div class="form-group">
+              <label for="address">Amount</label>
+              <input type="text" name="amount" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Email</label>
+              <input type="text" name="email" required>
+            </div>
+            <input type="submit" value="Withdraw" name="paypal">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="withdrawal-card">
+      <h2 class="withdrawal-type">Bank Account</h2>
+      <div>
+        <div class="with-details">
+          <p>Mimimum</p>
+          <p>$50</p>
+        </div>
+        <div class="with-details" >
+          <p>Charges</p>
+          <p>$6</p>
+        </div>
+
+        <div class="withdrawal-form">  
+          <form method="POST" action="{% url 'withdraw' %}">
+            {% csrf_token%}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="username" value="{{ user.username }}">
+            {% endif %}
+            <div class="form-group">
+              <label for="address">Amount</label>
+              <input type="text" name="amount" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Account Name</label>
+              <input type="text" name="accountname" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Bank Name</label>
+              <input type="text" name="bankname" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Account Number</label>
+              <input type="text" name="accountnumber" required>
+            </div>
+            <input type="submit" value="Withdraw" name="bank">
+          </form>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  </div>
+
+  
+{% endblock %}

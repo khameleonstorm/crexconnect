@@ -1,0 +1,78 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+
+<head>
+  <!-- <link rel="stylesheet" href="{% static 'css/contact.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <title>Deposit | FX Pro</title>
+</head>
+
+  <!-- About us -->
+  <div class="dashboard">
+    <div class="user">
+      <div id="menuButton" onclick="openNav()"><i class="fas fa-bars"></i></div>
+
+      <div class="user-icon">
+        <div class="svg"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg></div>
+        <p class="username"> <strong>{{ user.first_name}} {{user.last_name}}</strong></p>
+      </div>
+    </div>
+    
+    <p class="dashboard-header">Fund Your Account</p>
+   
+    <script src="https://widgets.coingecko.com/coingecko-coin-market-ticker-list-widget.js"></script>
+
+    <div class="wallet-add">
+      <p>Your FX Pro Bitcoin Address</p>
+      <input type="text" value="1B5hpvaatuKr96sL9hV3QqmJQLUXg4Hep8" id="myInput" readonly>
+      <button onclick="myFunction()" id="copyBtn">Copy</button>
+    </div>
+
+    <!-- Submmit Image -->
+    <section class="deposit">
+      <div class="deposit-step">
+        <h3>Step 1: Buy Bitcoin or Ethereum</h3>
+        <p>You can buy cryptocurrency from a trusted platforom like <a href="https://www.moonpay.com/">Moonpay </a> or <a href="https://www.coinbase.com/">Coinbase</a> create and account then buy your desired amount of bitcoin. Follow this step if you don't already have a Bitcoin Wallet</p>
+      </div>
+
+      <div class="deposit-step">
+        <h3>Step 2: Transfer to your FX PRO Wallet</h3>
+        <p>After buying your desired amount of bitcoin from any platform of your choice, click send then Copy your FX Pro wallet address above and paste in the form. </p>
+      </div>
+
+      <div class="deposit-step">
+        <h3>Step 3: Send a Copy of Transaction Info</h3>
+        <p>After sending your desired amount of Bitcoin to your FX Pro Bitcoin wallet address. Send us the copy of traansaction info. Or you can send us an email for confirmation. Wait 10 - 20 minutes for  the transaction confirmation <br> <br> 
+        <form id="deposits" method = "POST"  enctype="multipart/form-data" style="text-align: center;" method="POST" action="https://getform.io/f/5a303099-251c-4f13-b3ba-60d280404af2">
+          {% csrf_token%}
+          <label for="img" style="margin: 20px 0; font-size: 16px;">Select image:</label>
+          <div class="deposit-form">
+            <input type="file" name="photo">
+            <input type="submit">
+          </div>
+        </form>
+        
+      </div>
+
+      <div class="deposit-step">
+        <h3>Final Step: Dashboard</h3>
+        <p>Your FX Pro Account start earning interest automatically 24 hours after successful deposit. Monitor your dashboard daily to see how your assets grow</p>
+      </div>
+
+      <div class="note">
+        <p> Note: Only you can control your account. <br> Protect your asset do not give your login details to anyone.</p>
+      </div>
+      
+    </section>
+    <!-- <p style="font-size: 16px; padding: 1rem 0; font-weight: 600;">Send your desired investment amount to this Wallet</p>
+    <p style="font-size: 16px; padding: 1rem 0; font-weight: 600;">Then send a screenshot of payment details</p>
+    <p style="font-size: 16px; padding: 1rem 0; font-weight: 600;">Thanks</p> -->
+  </div>
+
+{% endblock %}
