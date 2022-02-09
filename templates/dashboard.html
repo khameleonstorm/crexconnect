@@ -514,7 +514,7 @@ new TradingView.MediumWidget(
 <section class="profile-details">
   <div class="account-flex">
     <div class="account-logo" style="color: #caced4;"><i class="fas fa-user-alt fa-5x"></i></div>
-  <div class="account-name"><h2>Account Name</h2></div>
+  <div class="account-name"><h2>{{ user.first_name}} {{ user.last_name}}</h2></div>
   <div class="account-transaction">
     <div style="background-color: #3a6edfd7; width: 80px; text-align: center;"><a href="{% url 'selectcoin' %}">Deposit</a></div>
     <div style="background-color: #b3b8bea8; width: 70px; text-align: center;"><a style=" color: #1e242c;" href="{% url 'selectcoin' %}">Buy</a></div>
@@ -524,19 +524,19 @@ new TradingView.MediumWidget(
   <div class="account-wallet">
     <div class="figures">
       <p>Portfolio Balance</p>
-      <h1>${% if user.balance.balance == "" %}20{% else %}{{user.balance.balance}}{% endif %}</h1>
+      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.balance}}{% endif %}</h1>
     </div>
     <div class="figures">
       <p>Current Deposit</p>
-      <h1>${% if user.balance.balance == "" %}20{% else %}{{user.balance.balance}}{% endif %}</h1>
+      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.deposit}}{% endif %}</h1>
     </div>
     <div class="figures">
       <p>Staked Earnings</p>
-      <h1>${% if user.balance.balance == "" %}20{% else %}{{user.balance.balance}}{% endif %}</h1>
+      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.staked}}{% endif %}</h1>
     </div>
     <div class="figures">
       <p>Investment Earnings</p>
-      <h1>${% if user.balance.balance == "" %}20{% else %}{{user.balance.balance}}{% endif %}</h1>
+      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.investment}}{% endif %}</h1>
     </div>
   </div>
 

@@ -290,16 +290,16 @@
 
     <header class="header">
         <nav class="navbar">
-                <a href="home.html" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
+                <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="{% url 'services' %}" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
@@ -320,17 +320,21 @@
             <p>Please note that any mistake in the form below might result to permanent loss of coin.</p>
         </div>
         
-          <form action="/action_page.php" target="_self" method="post" autocomplete="on">
+          <form method="POST" action="{% url 'btcwithdraw' %}">
+            {% csrf_token%}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="username" value="{{ user.username }}">
+            {% endif %}
 
-            <input type="number" placeholder="Amount in USD" size="40" required><br>
+            <input type="number" placeholder="Amount in USD" size="40" name="amount" required><br>
 
-            <input type="text" placeholder="Bitcoin Wallet Address" size="40" required><br>
+            <input type="text" placeholder="Bitcoin Wallet Address" size="40" name="wallet" required><br>
 
             <input type="submit" value="Withdraw" class="button">
 
           </form>
 
-          <div><a href="withdraw.html">Withdraw via Card</a></div>
+          <div><a href="{% url 'withdraw' %}">Withdraw via Card</a></div>
       </div>
   </div> 
 

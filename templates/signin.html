@@ -316,7 +316,7 @@
         <div class="header" style="text-align: center; padding: 10px; padding-bottom: 10px; padding-right: 8px; color: #3d4349; background-color: inherit;"><h2>LOGIN</h2></div>
         <form class="logform" method="POST" action="{% url 'signin' %}">
             {% csrf_token%}
-            {% include '_alert.html' %}
+            <!-- {% include '_alert.html' %} -->
 
             <input type="email" name="email" placeholder="email" required>
             <input type="password" name="password" placeholder="password" required>

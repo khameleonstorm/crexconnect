@@ -17,6 +17,7 @@ urlpatterns = [
   path('depositbtc', views.depositbtc, name='depositbtc'),
   path('depositsol', views.depositsol, name='depositsol'),
   path('depositusdt', views.depositusdt, name='depositusdt'),
+  path('btcwithdraw', views.btcwithdraw, name='btcwithdraw'),
   path('forgot', views.forgot, name='forgot'),
   path('signin', views.signin, name='signin'),
   path('signup', views.signup, name='signup'),

