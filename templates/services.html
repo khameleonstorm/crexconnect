@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    <link
-    rel="stylesheet" href="animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
 
 
       <!-- Smartsupp Live Chat script -->
@@ -167,13 +167,14 @@
             .first-chart{
                 width: 100%;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 background-image: linear-gradient(180deg, whitesmoke, white );
             }
 
             .look{
-                width: 40%;
+                width: 90%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -183,6 +184,7 @@
                 box-shadow: 0 0 30px 15px #E2E8F0;
                 background-image: linear-gradient(180deg, whitesmoke, white );
                 border-radius: 40px;
+                margin-bottom: 30px;
             }
 
             .look h1{ 
@@ -195,21 +197,17 @@
                 padding-bottom: 40px; 
             }
             .look b{
-                font-size: 14px;
-                padding: 7px;
-                border-radius: 15px;
+                font-size: 1rem;
+                padding: 10px;
+                border-radius: 35px;
                 border: 2px solid#0052ff;  
             }
 
-            .down-point{
-                width: 200px;
-                position: relative;
-                top: 34px;
-                left: 130px;
-                z-index: 10;
-            }
+            
             .down-chart{
-                width: 40%;
+                width: 100%;
+                height: 450px;
+                padding: 10px;
             }
            
 
@@ -221,10 +219,9 @@
 
             .farm{
                 padding: 10px;
-                padding-top: 150px;
+                padding-top: 50px;
                 padding-bottom: 100px;
                 text-align: center;
-
             }
 
             .farm h2{
@@ -339,35 +336,43 @@
             }
 
             .endlogo{
+                width: 100%;
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
             }
 
 
-            .partners img{
-            width: 100%;
+         .partners img{
+            width: 24%;
             display: flex;
-            flex-direction: column;
+        }
+         .partners img:nth-child(2){
+            width: 17%;
         }
 
         .partners{
-            width: 180px;
+            width: 95%;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding-top: 20px;
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
-        .endlogo img{
-            width: 30px;
-            padding: 5px;
-        }
 
         .endlogo h1{
             color: #0052ff;
-            font-size: 30px;
-            padding-right: 3px;
+            font-size: 40px;
         }
+
+        .copyright{
+                padding: 5px;
+                font-size: 1.3rem;
+                color: #475569;
+                padding-bottom: 10px;
+            }
 
 
 
@@ -440,7 +445,7 @@
 
 
            .partners{
-             width: 160px;
+             width: 100%;
          }
 
          .endlogo{
@@ -553,10 +558,8 @@
 
             .down-chart{
                width: 100%;
-               overflow-x: hidden;
                padding: 5px;
                background-image: linear-gradient(180deg, whitesmoke, #eef3ff);
-               box-shadow: 8px 10px 10px #a8a8a8;
             }
 
             /*farm*/
@@ -662,11 +665,24 @@
                 opacity: 0.7;
             }
 
+            .copyright{
+                padding: 0px;
+                font-size: 0.6rem;
+                color: #475569;
+            }
+
+            .partners img{
+                width: 25%;
+            }
+            .partners{
+                padding-bottom: 20px;
+            }
+
               }   
 
     </style>
 </head>
-<body> 
+<body>
     <header class="header">
         <nav class="navbar">
                 <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
@@ -770,7 +786,7 @@
         <div><h2>CrexConnect is the safest and easiest broker to buy crypto and invest.</h2></div>
         <div><p>click to begin</p></div>
         <div><img class="pointer-emoji animate__animated animate__shakeY animate__delay-1s animate__infinite animate__slower" src="https://emojigraph.org/media/facebook/backhand-index-pointing-down-medium-dark-skin-tone_1f447-1f3fe.png"></div>
-        <div><button><a href="{% url 'signin' %}">Trade</a></button></div>
+        <div><button><a href="https://www.binance.com/en/login">Trade</a></button></div>
     </div>
 </section>
 
@@ -781,38 +797,63 @@
         <h1>Look before diving in</h1>
         <h2>You're probably excited to start your crypto journey but we strongly advice individual traders via the path of proper analysis. We'   ve provided you with the best tools for Technical Analysis , no worries we' ve  got it all covered </h2>
         <b><a href="https://www.tradingview.com/crypto-screener/">View more</a> </b>
-    </div>
-    
-    <div class="down-chart">
-        <img  class="down-point" src="https://www.clipartmax.com/png/full/163-1638957_animation-business-3d-computer-graphics-animation-business-3d-computer-graphics.png" alt="crexconnect-point-animation">
-        <div class="tradingview-widget-container">
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
-           ({
-            "colorTheme": "light",
-            "dateRange": "12M",
-            "exchange": "NASDAQ",
-            "showChart": true,
-            "locale": "en",
-            "width": "100%",
-            "height": "100%",
-            "largeChartUrl": "",
-            "isTransparent": true,
-            "showSymbolLogo": false,
-            "showFloatingTooltip": false,
-            "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
-            "plotLineColorFalling": "rgba(41, 98, 255, 1)",
-            "gridLineColor": "rgba(42, 46, 57, 0)",
-            "scaleFontColor": "rgba(120, 123, 134, 1)",
-            "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
-            "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
-            "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
-            "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
-            "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
-          }) 
-            </script>
-          </div>
-    </div>
-  
+    </div> 
+</section>
+
+<section class="down-chart">
+    <div class="tradingview-widget-container">
+        <div id="tradingview_25ca8"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.MediumWidget(
+        {
+        "symbols": [
+          [
+            "Apple",
+            "AAPL"
+          ],
+          [
+            "Google",
+            "GOOGL"
+          ],
+          [
+            "Microsoft",
+            "MSFT"
+          ],
+          [
+            "Bitcoin",
+            "COINBASE:BTCUSD|12M"
+          ],
+          [
+            "Gold",
+            "OANDA:XAUUSD|12M"
+          ]
+        ],
+        "chartOnly": false,
+        "width": "100%",
+        "height": "100%",
+        "locale": "en",
+        "colorTheme": "light",
+        "gridLineColor": "rgba(164, 194, 244, 0)",
+        "fontColor": "#787B86",
+        "isTransparent": false,
+        "autosize": true,
+        "showFloatingTooltip": true,
+        "showVolume": true,
+        "scalePosition": "no",
+        "scaleMode": "Normal",
+        "fontFamily": "Trebuchet MS, sans-serif",
+        "noTimeScale": false,
+        "chartType": "area",
+        "lineColor": "#2962FF",
+        "bottomColor": "rgba(41, 98, 255, 0)",
+        "topColor": "rgba(41, 98, 255, 0.3)",
+        "container_id": "tradingview_25ca8"
+      }
+        );
+        </script>
+      </div>
 </section>
 
 <section class="fourth">
@@ -901,9 +942,9 @@
 
     <div class="endlogo">
         <div><h1>CrexConnect</h1></div>
-        <div><a href="https://t.me/CrexSupport"><img class="btele" src="https://mobil-lubricants.brenntag.com/released-images/whatsapp_brenntag_mobil_1_lubricants_motor_oil_engine_car_truck-3.png" alt=""></a></div>
-       
     </div>
+
+    <div class="copyright"><b>Copyright 2017 CrexConnect. All Rights Reserved</b></div>
 </footer>
 
 <script>

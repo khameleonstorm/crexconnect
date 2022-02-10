@@ -84,12 +84,6 @@ def depositsol(request):
     else:
         return redirect('login')
 
-# def selectcoin(request):
-#     if request.user.is_authenticated:
-#         return render(request, 'deposit.html')
-#     else:
-#         return redirect('login')
-
 
 def forgot(request):
     return render(request, 'forgot.html')

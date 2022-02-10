@@ -297,11 +297,6 @@
                 width: 5%;
                 display: none;
             }
-
-
-
-
-
         }
 
 
@@ -312,16 +307,16 @@
 
     <header class="header">
         <nav class="navbar">
-                <a href="home.html" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
+                <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="{% url 'services' %}" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
