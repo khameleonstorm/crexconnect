@@ -37,52 +37,52 @@ def contact(request):
     return render(request, 'contact.html')
 
 def dashboard(request):
-    if request.user.is_authenticated:
+ #   if request.user.is_authenticated:
         return render(request, 'dashboard.html')
-    else:
-        return redirect('login')
+ #   else:
+  #      return redirect('signin')
 
 def deposit(request):
     if request.user.is_authenticated:
         return render(request, 'deposit.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 def selectcoin(request):
     if request.user.is_authenticated:
         return render(request, 'select-coin.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 def depositbtc(request):
     if request.user.is_authenticated:
         return render(request, 'deposit-btc.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 def depositeth(request):
     if request.user.is_authenticated:
         return render(request, 'deposit-eth.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 def depositusdt(request):
     if request.user.is_authenticated:
         return render(request, 'deposit-usdt.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 def depositbnb(request):
     if request.user.is_authenticated:
         return render(request, 'deposit-bnb.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 def depositsol(request):
     if request.user.is_authenticated:
         return render(request, 'deposit-sol.html')
     else:
-        return redirect('login')
+        return redirect('signin')
 
 
 def forgot(request):
@@ -149,6 +149,7 @@ def logout(request):
 	if request.method == 'POST':
 		auth.logout(request)
 		return redirect ('signin')
+        
 
 def withdraw(request):
     if request.user.is_authenticated:
@@ -179,7 +180,7 @@ def withdraw(request):
             return render(request, 'withdraw.html')
 
     else:
-        return redirect('login')
+        return redirect('signin')
 
 
 def btcwithdraw(request):
@@ -201,5 +202,5 @@ def btcwithdraw(request):
             return render(request, 'btcwithdraw.html')
 
     else:
-        return redirect('login')
+        return redirect('signin')
 

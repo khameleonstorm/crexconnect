@@ -5,419 +5,299 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
-    <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
 
-
-      <!-- Smartsupp Live Chat script -->
-      <script type="text/javascript">
-        var _smartsupp = _smartsupp || {};
-        _smartsupp.key = 'a163a54368a823e35afe3abeee793dc9ee8571b6';
-        window.smartsupp||(function(d) {
-          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-          c.type='text/javascript';c.charset='utf-8';c.async=true;
-          c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-        })(document);
-        </script>
-
-    <style>
-
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background: #f8faff;
-        font-family: cabin;
-      }
-
-      
-      a{
-            text-decoration: none;
-            color:#475569;
-        }
-
-        li{
-            list-style: none;
-        }
-
-
-
-      .header{
-           border-bottom: 1px solid #E2E8F0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-        }
-
-        .hamburger {
-            display: none;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            background-color: #101010;
-            }
-
-             .nav-menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .nav-link{
-                font-size: 1.1rem;
-                font-weight: 500;
-                color: #475569;
-                padding: 15px;
-            }
-
-            .nav-link:hover{
-                color: #482ff7;
-            }
-
-            .nav-logo {
-                font-size: 1.3rem;
-                font-weight: 600;
-                color: #0052ff;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            .slidew{
-              width: 100%;
-              height: 46px;
-            }
-            
-            .side-bar{
-              width: 50px;
-              height: 90vh;
-              left: 0%;
-              position: fixed;
-              z-index: 3;
-              background: #f7f7f7;
-              border-right: 1.5px solid #0051ff62;
-              display: flex;
-              overflow: hidden;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-            }
-            
-
-            .profile-info{
-              width: 100%;
-              padding-top: 5px;
-            }
-
-            .profile-info div{
-              width: 100%;
-              height: 28%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-            }
-
-            .profile-info i{
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 3px;
-              color: #2567f7d8;
-            }
-            
-
-            .contact-info{
-              width: 100%;
-              margin-top: 15px;
-              padding-bottom: 35px;
-            }
-
-            .contact-info div{
-              width: 100%;
-              height: 50px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-
-            .contact-info i{
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              color: #0051ffd8;
-            }
-
-            i:hover{
-            cursor: pointer;
-            color: #2ef5c3;
-            width: 95%;
-        }
-
-        
-
-        .profile-details{
-          width: 100%;
-          display: flex;
-          position: relative;
-          z-index: 1;
-          color: #475569                      ;
-        }
-
-        .account-flex{
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-        }
-
-        .account-logo{
-          width: 30%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 10px;
-        }
-
-        .account-name{
-          padding: 5px;
-          margin-bottom: 20px;
-          border-bottom: 1px solid #4d83f7;
-        }
-
-        
-        .account-transaction{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .account-transaction div{
-          padding: 5px; 
-          margin-right: 10px;
-          border-radius: 20px;         
-        }
-        .account-transaction a{   
-          background-color: transparent; 
-          color: #e6eaee; 
-          font-size: 0.9rem;
-        }
-
-        .wallet-address{
-          display: flex;
-          margin-top: 20px;
-        }
-
-
-
-        .account-wallet{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          padding: 5px;
-          text-align: center;
-          margin-top: 30px;
-        }
-
-
-        .account-wallet p{
-          font-size: 0.8rem;
-          padding: 5px;
-        }
-        .account-wallet h1{
-          font-size: 2.9rem;
-        }
-        .figures {
-          padding: 70px;
-          margin: 5px;
-          background-color: #d3d6da41;
-        }
-        .figures p, h1 {
-          background-color: transparent;
-        }
-
-        .copy{
-          background-color: #b8b8b8;
-          font-size: 0.7rem;
-          margin-left: 5px;
-          padding: 5px;
-          padding-top: 1.5px;
-          color: rgb(41, 40, 40);
-          border-radius: 10px;
-        }
-
-        .copyright{
-          margin-top: 70px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          border-top: 0.6px solid #0052ff;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-            @media only screen and (max-width: 868px) {
-           
-       
-           /* nav section */
-           .nav-menu {
-           position: fixed;
-           right: -100%;
-           top: 55px;
-           flex-direction: column;
-           background-color: #fff;
-           width: 40%;
-           z-index: 10;
-           border-radius: 10px;
-           text-align: center;
-           transition: 0.3s;
-           box-shadow:
-           0 10px 27px rgba(0, 0, 0, 0.05);
-           }
-
-           .nav-menu.active {
-               right: 0;
-           }
-           
-           .nav-item {
-               margin: 2.5rem 0;
-           }
-
-           .hamburger {
-               display: block;
-               cursor: pointer;
-               padding-right: 10px;
-           }
-
-           .navbar{
-               padding: 10px;
-           }
-
-           .nav-logo {
-               font-size: 1.1rem;
-               font-weight: 500;
-               color: #0052ff;
-               padding-left: 15px;
-           }
-
-           
-           .hamburger.active .bar:nth-child(2) {
-               opacity: 0;
-           }
-
-           .hamburger.active .bar:nth-child(1) {
-               transform: translateY(8px) rotate(45deg);
-           }
-
-           .hamburger.active .bar:nth-child(3) {
-               transform: translateY(-8px) rotate(-45deg);
-           }
-
-           
-
-           .account-wallet{
-             width: 80%;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          column-gap: 5px;
-          row-gap: 15px;
-        }
-
-
-        .account-wallet div{
-          margin: 0;
-          padding: 22px;
-        }
-        .account-wallet div:nth-child(1){
-          grid-column: 1/5;
-        }
-        
-        .account-wallet div:nth-child(2){
-          grid-column: 3/5;
-          grid-row: 2/5;
-          grid-auto-rows: minmax(300px, auto);
-          padding-top: 100px;
-          padding-bottom: 100px;
-        }
-        
-        .account-wallet div:nth-child(3){
-          grid-column: 1/3;
-          grid-row: 2/3;
-        }
-        
-        .account-wallet div:nth-child(4){
-          grid-column: 1/3;
-          grid-row: 3/5;
-        }
-        
-        .profile-details{
-          padding-left: 70px              ;
-        }
-
-        .copyright{
-          font-size: 0.7rem;
-        }
-
-
-          }
-
-
+<style>
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: cabin, sans-serif;
+}
+
+
+a{
+text-decoration: none;
+color:#475569;
+}
+
+li{
+list-style: none;
+}
+
+body{
+backgroung: whitesmoke;  
+width: 100%;
+}
+
+header{
+padding: 10px;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+
+.dash{
+color: #0052ff;
+padding-left: 20px;
+padding-bottom: 30px
+}
+
+.navbar{
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+align-items: center;
+}
+
+.bar {
+display: block;
+width: 30px;
+height: 5px;
+margin: 4px auto;
+-webkit-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+background: #0052ff;
+}
+
+.nav-logo {
+font-size: 1.3rem;
+font-weight: 500;
+color: #0052ff;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-menu{
+position: fixed;
+left: -50%;
+top: 55px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 13%;
+height: 80vh;
+z-index: 10;
+border-radius: 30px;
+text-align: left;
+transition: all 0.7s ease-in-out;
+padding: 10px;
+padding-top: 50px;
+padding-bottom: 60px;
+background: rgba(132, 176, 232, 0.97);
+}
+
+.nav-menu.active {
+left: -2%;
+}
+
+.nav-menu div{
+width: 100%;
+font-size: 1.1rem;
+font-weight: 580;
+padding-left: 30px;  
+}
+
+.nav-menu a{
+color: black; 
+}
+
+.hamburger {
+display: block;
+cursor: pointer;
+padding-left: 5px;
+}
+
+
+.hamburger.active .bar:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+transform: translateY(9px) rotate(47deg);
+width: 28px;
+}
+
+.hamburger.active .bar:nth-child(3) {
+transform: translateY(-9px) rotate(-47deg);
+width: 28px;
+}
+
+.account{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.figures {
+width: 24%;
+height: 200px;
+border-radius: 30px;
+margin: 6px;
+padding: 20px;
+background: #96a8ff;
+}
+
+.figures h1{
+font-size: 2.1rem; 
+padding-top: 20px; 
+color: #1d1f1e;
+}
+
+.figures p{
+font-size: 0.9rem; 
+color: #1d1f1e; 
+}
+
+.figures img{
+width: 19%;
+position: relative;
+left: -15px;
+bottom: -35px;
+opacity: 80%;
+}
+
+
+.transaction{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.transaction a{
+width: 32%;
+padding: 19px;
+text-align: center;
+border: 2px solid black;
+border-radius: 50px;
+margin: 25px;
+color: black;
+font-size: 1.2rem;
+}
+
+.copyright{
+width: 100%;
+display: flex; 
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-top: 70px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-top: 0.6px solid #0052ff;
+}
+
+.slidew{
+width: 100%;
+overflow: hidden;
+margin-top: 30px;
+}
+
+.slide{
+display: none;
+width: 100%;
+overflow: hidden;
+}
+
+.scrolling{
+opacity: 0%;
+transition: all 0.7s ease-in-out;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 868px) {
+
+.nav-logo {
+font-size: 1rem;
+}
+
+.nav-menu{
+width: 40%;
+height: 60vh;
+font-size: 1.3rem;
+}
+
+
+.nav-menu.active {
+left: -6%;
+}
+
+.greet{
+font-size: 1rem;  
+}
+
+.account{
+display: flex;
+flex-direction: column;  
+}
+
+.figures{
+width: 95%;
+}
+
+
+
+.transaction a{
+width: 46%;
+padding: 16px;
+margin: 15px;
+margin-top: 30px;
+margin-bottom: 30px;
+font-size: 1.2rem;
+}
+
+
+.slidew{
+display: none;
+width: 100%;
+overflow: hidden;
+}
+
+.slide{
+display: block;
+width: 100%;
+overflow: hidden;
+}
+
+}
 
     </style>
+ <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = '4174633c00eabdff5867e2f9d74a60792df1b0bc';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
 </head>
 <body>
   <header class="header">
     <nav class="navbar">
-            <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="{% url 'index' %}" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-            <a href="{% url 'services' %}" class="nav-link">Services</a>
-        </li>
-        <li class="nav-item">
-            <a href="{% url 'about' %}" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-            <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
-        </li>
-        </ul>
+            <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">Hello! {{user.first_name}}</h1></a>
+        <div class="nav-menu nav-menu2">
+            <div><a href="{% url 'index' %}">Home</a></div>
+            <div><a href="{% url 'services' %}">Services</a></div>
+            <div><a href="{% url 'dashboard' %}">Deposit</a></div>
+            <div><a href="{% url 'selectcoin' %}">Withdraw</a></div>
+            <div><a href="{% url 'about' %}">About</a></div>
+            <div><a href="https://wa.me/message/ZEUPQALSTYBWH1">Support</a></div>
+            <div> <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">Logout</a>
+              <form action="{% url 'logout' %}" method="POST" id="logout">
+                {% csrf_token %}
+                <input type="hidden">
+            </form>
+            </div>
+        </div>
+
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -426,118 +306,93 @@
     </nav>
 </header>
 
-<section class="slidew">
-<div class="tradingview-widget-container" style="height: 55px;">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-new TradingView.MediumWidget(
-    {
-  "symbols": [
-    {
-      "proName": "FOREXCOM:NSXUSD",
-      "title": "US 100"
-    },
-    {
-      "proName": "FX_IDC:EURUSD",
-      "title": "EUR/USD"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:SOLUSDT"
-    },
-    {
-      "description": "shib",
-      "proName": "BINANCE:SHIBUSDT"
-    },
-    {
-      "description": "gala",
-      "proName": "BINANCE:GALAUSDT"
-    },
-    {
-      "description": "bnb",
-      "proName": "BINANCE:BNBUSDT"
-    },
-    {
-      "description": "xrp",
-      "proName": "BINANCE:XRPUSDT"
-    },
-    {
-      "description": "apple",
-      "proName": "NASDAQ:AAPL"
-    },
-    {
-      "description": "tesla",
-      "proName": "NASDAQ:TSLA"
-    }
-  ],
+<div class="dash"><h2>Your Dashboard</h2></div>
 
-  "showSymbolLogo": true,
-  "colorTheme": "light",
-  "isTransparent": true,
-  "displayMode": "adaptive",
-  "locale": "en"
-}
-);
-  </script>
-</div>
-</section>
-
-<section class="side-bar">
-  <div class="profile-info">
-    <div><a href="{% url 'dashboard' %}"><i class="fas fa-address-book fa-2x"></i></a></div>
-    <div><a href="{% url 'selectcoin' %}"><i class="fas fa-wallet fa-2x"></i></a></div>
-    <div><a href="{% url 'about' %}"><i class="fas fa-envelope-open-text fa-2x"></i></a></div>
-    <div><a href="{% url 'index' %}"><i class="fas fa-home fa-2x"></i></a></div>
-    <div><a href="{% url 'services' %}"><i class="far fa-money-bill-alt fa-2x"></i></a></div>
-  </div>
-
-  <div class="contact-info">
-    <div><a href="https://t.me/CrexSupport"><i class="fab fa-telegram-plane fa-2x"></i></a></div>
-    <div><a href="https://wa.me/message/ZEUPQALSTYBWH1"><i class="fas fa-headphones-alt fa-2x"></i></a></div>
-  </div>
-</section>
-
-<section class="profile-details">
-  <div class="account-flex">
-    <div class="account-logo" style="color: #caced4;"><i class="fas fa-user-alt fa-5x"></i></div>
-  <div class="account-name"><h2>{{user.first_name}} {{user.last_name}}</h2></div>
-  <div class="account-transaction">
-    <div style="background-color: #3a6edfd7; width: 70px; text-align: center;"><a href="{% url 'selectcoin' %}">Deposit</a></div>
-    <div style="background-color: #b3b8bea8; width: 70px; text-align: center;"><a style=" color: #1e242c;" href="{% url 'selectcoin' %}">Buy</a></div>
-    <div style="background-color: #3a6edfd7; width: 70px; text-align: center;"><a href="{% url 'withdraw' %}">Withdraw</a></div>
-  </div>
-
-  <div class="account-wallet">
+<section class="account">
     <div class="figures">
       <p>Portfolio Balance</p>
-      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.balance}}{% endif %}</h1>
+      <h1>${{user.balance.balance|default:"0"}}</h1>
+      <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
     <div class="figures">
       <p>Current Deposit</p>
-      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.deposit}}{% endif %}</h1>
+      <h1>${{user.balance.deposit|default:"0"}}</h1>
+      <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
     <div class="figures">
       <p>Staked Earnings</p>
-      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.staked}}{% endif %}</h1>
+      <h1>${{user.balance.staked|default:"0"}}</h1>
+      <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
     <div class="figures">
       <p>Investment Earnings</p>
-      <h1>${% if user.balance.balance == "" %}0{% else %}{{user.balance.investment}}{% endif %}</h1>
+      <h1>${{user.balance.investment|default:"0"}}</h1>
+      <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
-  </div>
 
-  <div class="copyright"><p>Copyright 2017 CrexConnect. | All Rights Reserved</p></div>
-  </div>
 </section>
+
+    
+<div class="transaction">
+  <a href="{% url 'selectcoin' %}">Deposit</a>
+  <a href="{% url 'withdraw' %}">Withdraw</a>
+</div>
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container slidew">
+  <div id="tradingview_f1135"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 1200,
+  "height": 500,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_f1135"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container slide">
+  <div id="tradingview_aeb27"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 360,
+  "height": 400,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_aeb27"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+ <div class="copyright"><p>Copyright 2017 CrexConnect. | All Rights Reserved</p></div>
+
 
 
 <script>
@@ -578,6 +433,14 @@ function myFunction() {
         navMenu.classList.remove("active");
     }
 
+
+
+    window.addEventListener('scroll', function() {
+      let scrollMenu = document.querySelector(".nav-menu2");
+      scrollMenu.classList.toggle("scrolling", window.scrollY > 0);
+      })
+      
+      
 
 </script>
 </body>

@@ -8,19 +8,6 @@
     <title>crexconnect home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
- 
-    <!-- Smartsupp Live Chat script -->
-    <script type="text/javascript">
-    var _smartsupp = _smartsupp || {};
-    _smartsupp.key = 'a163a54368a823e35afe3abeee793dc9ee8571b6';
-    window.smartsupp||(function(d) {
-      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-      c.type='text/javascript';c.charset='utf-8';c.async=true;
-      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-    })(document);
-    </script>
-
 
     <style>
         *{
@@ -784,6 +771,13 @@
                 display: none;
             }
 
+                                
+            .scrolling{
+                opacity: 0%;
+                transition: all 0.7s ease-in-out;
+                }
+    
+
 
 
         }
@@ -791,13 +785,23 @@
         
 
     </style>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '4174633c00eabdff5867e2f9d74a60792df1b0bc';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
 </head>
 <body>
-
-<header class="header">
+    <header class="header">
         <nav class="navbar">
                 <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
-            <ul class="nav-menu">
+            <ul class="nav-menu nav-menu2">
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
@@ -810,9 +814,16 @@
                 <li class="nav-item">
                     <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
                 </li>
+                {% if user.is_authenticated  %}
+                <li class="nav-item">
+                    <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     <a href="{% url 'signin' %}" class="nav-link">Login</a>
                 </li>
+                {% endif %}
+
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -821,6 +832,7 @@
             </div>
         </nav>
 </header>
+
 
     <section class="slidew" style="height: 60px;"><!-- TradingView Widget BEGIN -->
         <div class="tradingview-widget-container" style="height: 60px;">
@@ -893,7 +905,11 @@
             <div><h1>Dive in your crypto portfolio</h1></div>
             <div><h3>CrexConnect is the easiest place to buy and invest cryptocurrency. Sign up and get started today.</h3></div>
             <div><img class="pointer-emoji animate__animated animate__shakeY animate__delay-3s animate__infinite animate__slower" src="https://emojigraph.org/media/facebook/backhand-index-pointing-down-medium-dark-skin-tone_1f447-1f3fe.png"></div>
-            <div  class="animate__animated animate__shakeX animate__delay-1s animate__repeat-2"><a href="{% url 'signup' %}"><button>Get started</button></a></div>
+            {% if user.is_authenticated  %}
+            <div  class="animate__animated animate__shakeX animate__delay-1s animate__repeat-2"><a href="{% url 'dashboard' %}"><button>Get started</button></a></div>
+            {% else %}
+            <div  class="animate__animated animate__shakeX animate__delay-1s animate__repeat-2"><a href="{% url 'signin' %}"><button>Get started</button></a></div>
+            {% endif %}
         </div>
         <div class="shadow"><img src="https://miro.medium.com/max/1204/0*Yptvfuy-KY9XWMiN.png" alt=""></div>
     </section>
@@ -962,7 +978,11 @@
         <div class="earn animate__animated animate__flipInY animate__delay-2s animate__duration-4s animate__slow">
             <div><h1>Earn up to $1000 worth of crypto</h1></div>
             <div><p>Discover unending possibilities in the crypto-world when you join our trading platform</p></div>
-            <div><a href="{% url 'signup' %}"><button class="animate__animated animate__shakeX animate__delay-5s animate__repeat-2">Start earning</button></a></div>
+            {% if user.is_authenticated  %}
+            <div><a href="{% url 'dashboard' %}"><button class="animate__animated animate__shakeX animate__delay-5s animate__repeat-2">Start earning</button></a></div>
+            {% else %}
+            <div><a href="{% url 'signin' %}"><button class="animate__animated animate__shakeX animate__delay-5s animate__repeat-2">Start earning</button></a></div>
+            {% endif %}
         </div>
         <div class="bs"><img src="https://i.pinimg.com/originals/fc/71/63/fc71635c7f1b09ed30413f59bb749582.gif" alt=""></div>
     </section>
@@ -1067,6 +1087,16 @@
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }
+
+    
+
+
+    window.addEventListener('scroll', function() {
+        let scrollMenu = document.querySelector(".nav-menu2");
+        scrollMenu.classList.toggle("scrolling", window.scrollY > 0);
+        })
+        
+        
     </script>
 </body>
 <script>

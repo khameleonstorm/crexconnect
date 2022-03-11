@@ -12,10 +12,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'i!b2!x&oo*8r2y!n#vfp@jworye#hd6ocdv5qo(!^sau((pj2h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -67,22 +67,15 @@ WSGI_APPLICATION = 'primeinvest.wsgi.application'
 # # Database
 # # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'crexconnect',
-#         'USER': 'postgres',
-#         'PASSWORD': 'operator',
-#         'HOST': 'localhost'
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
-
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'crexdb',
+        'USER': 'postgres',
+        'PASSWORD': '3099545689Vv++',
+        'HOST': 'localhost',
+     }
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

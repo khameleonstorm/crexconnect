@@ -291,7 +291,7 @@
     <header class="header">
         <nav class="navbar">
                 <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
-            <ul class="nav-menu">
+            <ul class="nav-menu nav-menu2">
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
@@ -304,6 +304,16 @@
                 <li class="nav-item">
                     <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
                 </li>
+                {% if user.is_authenticated  %}
+                <li class="nav-item">
+                    <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'signin' %}" class="nav-link">Login</a>
+                </li>
+                {% endif %}
+
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -312,6 +322,7 @@
             </div>
         </nav>
 </header>
+
 
   <div class="wrapper">
       <div class="wrap">
