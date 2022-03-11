@@ -8,279 +8,283 @@
     <title> Login</title>
 
 
-    <style>
+<style>
 
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: cabin;
-            list-style: none;
-        }
+*{
+margin: 0;
+padding: 0;
+font-family: cabin;
+list-style: none;
+}
 
-        a{
-            text-decoration: none;
-            color: inherit;
-        }
+a{
+text-decoration: none;
+color: inherit;
+}
 
 
-               
+
 .header{
-            border-bottom: 1px solid #aeb0b3;
-            background-color: whitesmoke;
-        }
+border-bottom: 1px solid #aeb0b3;
+background-color: whitesmoke;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
 
-        .hamburger {
-            display: none;
-        }
+.hamburger {
+display: none;
+}
 
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            background-color: #101010;
-            }
+.bar {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px auto;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+background-color: #101010;
+}
 
-             .nav-menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+.nav-menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-            .nav-link{
-                font-size: 1.1rem;
-                font-weight: 500;
-                color: #475569;
-                padding: 15px;
-            }
+.nav-link{
+font-size: 1.1rem;
+font-weight: 500;
+color: #475569;
+padding: 15px;
+}
 
-            .nav-link:hover{
-                color: #482ff7;
-            }
+.nav-link:hover{
+color: #482ff7;
+}
 
-            .nav-logo {
-                font-size: 1.4rem;
-                font-weight: 600;
-                color: #2a68ee;;
-            }
-
-
-        .container{
-            width: 100%;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            background-color: whitesmoke;
-        }
+.nav-logo {
+font-size: 1.4rem;
+font-weight: 600;
+color: #2a68ee;;
+}
 
 
+.container{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+background-color: whitesmoke;
+}
 
-        .logbox{
-            width: 30%;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            background-color: #f0f5fa;
-            box-shadow: 5px 5px 5px #272e35;
-            border-radius: 20px;
-        }
 
-        input{
-            padding: 5px;
-            border: 1px solid #6f9fd6;
-            border-radius: 5px;
-            margin: 7px;
-            width: 230px;
-        }
 
-        .signupt{
-            padding-top: 10px;
-            display: flex;
-            flex-direction: column;
-            font-size: 0.9rem;
+.logbox{
+width: 30%;
+padding: 50px;
+display: flex;
+flex-direction: column;
+background: #f0f5fa;
+box-shadow: 5px 5px 5px rgba(130, 176, 230, 0.50);
+border-radius: 20px;
+}
 
-        }
+input{
+padding: 5px;
+border: 1px solid #6f9fd6;
+border-radius: 5px;
+margin: 7px;
+width: 230px;
+}
 
-        
-           
-        .button{
-            width: 90%;
-            text-align: center;
-            color: whitesmoke;
-            border: none;
-            padding: 5px;
-            border-radius: 25px;
-            background-color: #2161eb;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
+.signupt{
+padding-top: 10px;
+display: flex;
+flex-direction: column;
+font-size: 0.9rem;
 
-        footer{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                background-color: whitesmoke;
-                padding-top: 30px;
-            }
+}
 
-            .partners{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                padding: 20px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-            .partners div{
-                width: 20%;
-            }
-            .partners img{
-                width: 100%;
-            }
-            .partners div:nth-child(2){
-                width: 16%;
-            }
 
-            .endlogo{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding-top: 20px;
-                padding-bottom: 30px;
-                width: 100%;
-            }
-            .endlogo div{
-                width: 13%;
-                color: #2a68ee;
-            }
-            .endlogo div:nth-child(2){
-                width: 5%;
-                display: none;
-            }
 
-            .endlogo img{
-                display: flex;
-                width: 20%;
-            }
+.button{
+width: 90%;
+text-align: center;
+color: whitesmoke;
+border: none;
+padding: 7px;
+border-radius: 25px;
+background-color: #2161eb;
+margin-top: 10px;
+margin-bottom: 20px;
+font-size: 0.9rem;
+}
 
-            .copyright{
-                padding: 5px;
-                font-size: 1rem;
-                color: #475569;
-            }
+footer{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: whitesmoke;
+padding-top: 30px;
+}
 
+.partners{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+padding: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.partners div{
+width: 20%;
+}
+.partners img{
+width: 100%;
+}
+.partners div:nth-child(2){
+width: 16%;
+}
+
+.endlogo{
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 30px;
+width: 100%;
+}
+.endlogo div{
+width: 13%;
+color: #2a68ee;
+}
+.endlogo div:nth-child(2){
+width: 5%;
+display: none;
+}
+
+.endlogo img{
+display: flex;
+width: 20%;
+}
+
+.copyright{
+padding: 5px;
+font-size: 1rem;
+color: #475569;
+}
 
 
 
 
 
 
-        @media only screen and (max-width: 768px) {
-           
-       
-           /* nav section */
-           .nav-menu {
-           position: fixed;
-           right: -100%;
-           top: 60px;
-           flex-direction: column;
-           background-color: whitesmoke;
-           width: 40%;
-           z-index: 10;
-           text-align: center;
-           transition: 0.5s;
-           box-shadow:
-           0 10px 20px rgba(0, 0, 0, 0.05);
-           }
 
-           .nav-menu.active {
-               right: 0;
-           }
-           
-           .nav-item {
-               margin: 2.1rem 0;
-           }
-
-           .hamburger {
-               display: block;
-               cursor: pointer;
-           }
-
-           .navbar{
-               padding: 10px;
-           }
-
-           .nav-logo {
-               font-size: 1.3rem;
-               font-weight: 500;
-               color: #1d63faf5;
-           }
-
-           
-           .hamburger.active .bar:nth-child(2) {
-               opacity: 0;
-           }
-
-           .hamburger.active .bar:nth-child(1) {
-               transform: translateY(8px) rotate(45deg);
-           }
-
-           .hamburger.active .bar:nth-child(3) {
-               transform: translateY(-8px) rotate(-45deg);
-           }
-
-           .logbox{
-            width: 70%;
-            padding: 10px;
-        }
-
-        .copyright{
-                padding: 1px;
-                font-size: 0.9rem;
-                color: #475569;
-            }
-
-            .endlogo{
-                width: 50%;
-                display: flex;
-            }
-            .endlogo div{
-                width: 100%;
-                color: #2a68ee;
-            }
-            .endlogo div:nth-child(2){
-                width: 5%;
-                display: none;
-            }
-            .endlogo div:nth-child(3){
-                width: 5%;
-                display: none;
-            }
+@media only screen and (max-width: 768px) {
 
 
+/* nav section */
+.nav-menu {
+position: fixed;
+right: -100%;
+top: 60px;
+flex-direction: column;
+background-color: whitesmoke;
+width: 40%;
+z-index: 10;
+text-align: center;
+transition: 0.5s;
+box-shadow:
+0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu.active {
+right: 0;
+}
+
+.nav-item {
+margin: 2.1rem 0;
+}
+
+.hamburger {
+display: block;
+cursor: pointer;
+}
+
+.navbar{
+padding: 10px;
+}
+
+.nav-logo {
+font-size: 1.3rem;
+font-weight: 500;
+color: #1d63faf5;
+}
+
+
+.hamburger.active .bar:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+transform: translateY(-8px) rotate(-45deg);
+}
+
+.logbox{
+width: 90%;
+padding: 10px;
+}
+
+.copyright{
+padding: 1px;
+font-size: 0.9rem;
+color: #475569;
+}
+
+.endlogo{
+width: 50%;
+display: flex;
+}
+.endlogo div{
+width: 100%;
+color: #2a68ee;
+}
+.endlogo div:nth-child(2){
+width: 5%;
+display: none;
+}
+.endlogo div:nth-child(3){
+width: 5%;
+display: none;
+}
+
+.button{
+width: 60%;
+}
+
+input{
+width: 70%;
+}
+
+
+}
 
 
 
-        }
-
-
-
-    </style>
+</style>
 </head>
 <body>
 
@@ -313,7 +317,7 @@
 </header>
     <div class="container">    
     <div class="logbox">
-        <div class="header" style="text-align: center; padding: 10px; padding-bottom: 10px; padding-right: 8px; color: #3d4349; background-color: inherit;"><h2>LOGIN</h2></div>
+        <div class="header" style="padding: 10px; padding-bottom: 10px;  color: #2a68ee; background: inherit;"><h2>LOGIN</h2></div>
         <form class="logform" method="POST" action="{% url 'signin' %}">
             {% csrf_token%}
             <!-- {% include '_alert.html' %} -->
@@ -325,7 +329,7 @@
 
         <div class="signupt">
             <div> <p style="padding-top: 3px;">If you don't have an account</p></div>
-            <div class="button" style="width: 50%;"><a href="{% url 'signup' %}">SignUp</a></div>
+            <a class="button" style="width: 50%;" href="{% url 'signup' %}">SignUp</a>
         </div>
     </div>
     </div>

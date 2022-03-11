@@ -8,283 +8,282 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
 
 
-    <style>
+<style>
 
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: cabin;
-            list-style: none;
-            text-decoration: none;
-        }
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: cabin, sans-serif;
+list-style: none;
+text-decoration: none;
+}
 
-        .header{
-            border-bottom: 1px solid #aeb0b3;
-            background-color: whitesmoke;
-        }
+.header{
+border-bottom: 1px solid #aeb0b3;
+background: whitesmoke;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
 
-        .hamburger {
-            display: none;
-        }
+.hamburger {
+display: none;
+}
 
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            background-color: #101010;
-            }
+.bar {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px auto;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+background: #101010;
+}
 
-             .nav-menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+.nav-menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-            .nav-link{
-                font-size: 1.1rem;
-                font-weight: 500;
-                color: #475569;
-                padding: 15px;
-            }
+.nav-link{
+font-size: 1.1rem;
+font-weight: 500;
+color: #475569;
+padding: 15px;
+}
 
-            .nav-link:hover{
-                color: #482ff7;
-            }
+.nav-link:hover{
+color: #482ff7;
+}
 
-            .nav-logo {
-                font-size: 1.4rem;
-                font-weight: 600;
-                color: #2a68ee;
-            }
-
-
-        .wrapper{
-            width: 100%;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .wrap{
-            width: 50%;
-            background-color: whitesmoke;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 0.8rem;
-        }
-
-        input{
-            background-color: transparent;
-            padding: 10px;
-            border-radius: 25px;
-            border: 0.5px solid #6f9fd6;
-            margin: 3px;
-            margin-bottom: 7px;
-        }
-
-        .card-details{
-            padding: 15px;
-            margin-bottom: 20px;
-            background-color: rgba(201, 200, 200, 0.233);
-        }
-
-        h2{
-            padding-bottom: 10px;
-            color: #2161eb;
-        }
-
-        .button{
-            width: 80%;
-            text-align: center;
-            color: whitesmoke;
-            border: none;
-            padding: 5px;
-            border-radius: 25px;
-            background-color: #2161eb;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
-        }
-
-        a{
-            list-style: none;
-            color: #2e2d2df1;
-            font-weight: 700;
-            padding-left: 10px;
-        }
-
-        
-        footer{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                background-color: whitesmoke;
-                padding-top: 30px;
-            }
-
-            .partners{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                padding: 20px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-            .partners div{
-                width: 20%;
-            }
-            .partners img{
-                width: 100%;
-            }
-            .partners div:nth-child(2){
-                width: 16%;
-            }
-
-            .endlogo{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding-top: 20px;
-                padding-bottom: 30px;
-                width: 100%;
-            }
-            .endlogo div{
-                width: 13%;
-                color: #2a68ee;
-            }
-            .endlogo div:nth-child(2){
-                width: 5%;
-                display: none;
-            }
-
-            .endlogo img{
-                display: flex;
-                width: 20%;
-            }
-
-            .copyright{
-                padding: 5px;
-                font-size: 1.1rem;
-                color: #475569;
-            }
+.nav-logo {
+font-size: 1.4rem;
+font-weight: 600;
+color: #2a68ee;
+}
 
 
+.wrapper{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.wrap{
+width: 50%;
+background: whitesmoke;
+padding: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-size: 0.8rem;
+}
+
+input{
+background-color: transparent;
+padding: 10px;
+border-radius: 25px;
+border: 0.5px solid #6f9fd6;
+margin: 3px;
+margin-bottom: 7px;
+}
+
+.card-details{
+padding: 15px;
+margin-bottom: 20px;
+background-color: rgba(201, 200, 200, 0.233);
+}
+
+h2{
+padding-bottom: 10px;
+color: #2161eb;
+}
+
+.button{
+width: 80%;
+text-align: center;
+color: whitesmoke;
+border: none;
+padding: 5px;
+border-radius: 25px;
+background-color: #2161eb;
+margin-top: 20px;
+margin-bottom: 30px;
+font-size: 0.9rem;
+}
+
+a{
+list-style: none;
+color: #2e2d2df1;
+font-weight: 700;
+padding-left: 10px;
+}
 
 
+footer{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: whitesmoke;
+padding-top: 30px;
+}
 
-        @media only screen and (max-width: 768px) {
+.partners{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+padding: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.partners div{
+width: 20%;
+}
+.partners img{
+width: 100%;
+}
+.partners div:nth-child(2){
+width: 16%;
+}
 
-            .wrap{
-            width: 90%;
-            background-color: whitesmoke;
-            padding: 10px;
-            font-size: 0.8rem;
-        }
+.endlogo{
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 30px;
+width: 100%;
+}
+.endlogo div{
+width: 13%;
+color: #2a68ee;
+}
+.endlogo div:nth-child(2){
+width: 5%;
+display: none;
+}
 
-        .button{
-            width: 100%;
-        }
+.endlogo img{
+display: flex;
+width: 20%;
+}
 
-
-        .nav-menu {
-           position: fixed;
-           right: -100%;
-           top: 60px;
-           flex-direction: column;
-           background-color: whitesmoke;
-           width: 40%;
-           z-index: 10;
-           text-align: center;
-           transition: 0.5s;
-           box-shadow:
-           0 10px 20px rgba(0, 0, 0, 0.05);
-           }
-
-           .nav-menu.active {
-               right: 0;
-           }
-           
-           .nav-item {
-               margin: 2.1rem 0;
-           }
-
-           .hamburger {
-               display: block;
-               cursor: pointer;
-           }
-
-           .navbar{
-               padding: 10px;
-           }
-
-           .nav-logo {
-               font-size: 1.3rem;
-               font-weight: 500;
-               color: #1d63faf5;
-           }
-
-           
-           .hamburger.active .bar:nth-child(2) {
-               opacity: 0;
-           }
-
-           .hamburger.active .bar:nth-child(1) {
-               transform: translateY(8px) rotate(45deg);
-           }
-
-           .hamburger.active .bar:nth-child(3) {
-               transform: translateY(-8px) rotate(-45deg);
-           }
-
-        .copyright{
-                padding: 1px;
-                font-size: 0.9rem;
-                color: #475569;
-            }
-
-            .endlogo{
-                width: 50%;
-                display: flex;
-            }
-            .endlogo div{
-                width: 100%;
-                color: #2a68ee;
-            }
-            .endlogo div:nth-child(2){
-                width: 5%;
-                display: none;
-            }
-            .endlogo div:nth-child(3){
-                width: 5%;
-                display: none;
-            }
+.copyright{
+padding: 5px;
+font-size: 1.1rem;
+color: #475569;
+}
 
 
 
 
 
-        }
+@media only screen and (max-width: 768px) {
 
-        
+.wrap{
+width: 90%;
+background-color: whitesmoke;
+padding: 10px;
+font-size: 0.8rem;
+}
 
-    </style>
+.button{
+width: 100%;
+}
+
+
+.nav-menu {
+position: fixed;
+right: -100%;
+top: 60px;
+flex-direction: column;
+background-color: whitesmoke;
+width: 40%;
+z-index: 10;
+text-align: center;
+transition: 0.5s;
+box-shadow:
+0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu.active {
+right: 0;
+}
+
+.nav-item {
+margin: 2.1rem 0;
+}
+
+.hamburger {
+display: block;
+cursor: pointer;
+}
+
+.navbar{
+padding: 10px;
+}
+
+.nav-logo {
+font-size: 1.3rem;
+font-weight: 500;
+color: #1d63faf5;
+}
+
+
+.hamburger.active .bar:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+transform: translateY(-8px) rotate(-45deg);
+}
+
+.copyright{
+padding: 1px;
+font-size: 0.9rem;
+color: #475569;
+}
+
+.endlogo{
+width: 50%;
+display: flex;
+}
+.endlogo div{
+width: 100%;
+color: #2a68ee;
+}
+.endlogo div:nth-child(2){
+width: 5%;
+display: none;
+}
+.endlogo div:nth-child(3){
+width: 5%;
+display: none;
+}
+
+
+
+
+
+}
+
+
+
+</style>
 </head>
 <body>
 

@@ -186,7 +186,7 @@ def withdraw(request):
 def btcwithdraw(request):
     if request.user.is_authenticated:
         if request.method == 'GET':
-            return render(request, 'btcwithdraw.html')
+            return render(request, 'BTCwithdraw.html')
 
 
         if request.method == 'POST':
@@ -199,8 +199,8 @@ def btcwithdraw(request):
             withdraw.save()
 
             # messages.success(request, 'Withdrawal Processing')
-            return render(request, 'btcwithdraw.html')
+            return render(request, 'BTCwithdraw.html')
 
     else:
-        return redirect('signin')
+        return redirect('dashboard')
 
