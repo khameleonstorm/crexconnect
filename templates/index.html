@@ -96,10 +96,14 @@ color: #0052ff;
 }
 
 
-.slidew{
-position: fixed;
+.slidews{
 width: 100%;
 overflow: hidden;
+height: 70px;
+}
+
+.slidew{
+width: 100%;
 }
 
 .first{
@@ -107,6 +111,7 @@ display: flex;
 flex-direction: row;
 width: 100%;
 padding: 50px;
+padding-top: 0px;
 }
 
 .dive{
@@ -860,11 +865,11 @@ width: 100%;
         </nav>
 </header>
 
-
-    <section class="slidew" style="height: 60px;"><!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container" style="height: 60px;">
+<!-- TradingView Widget BEGIN -->
+    <section class="slidews">
+        <div class="tradingview-widget-container slidew">
           <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
         new TradingView.MediumWidget(
             {
