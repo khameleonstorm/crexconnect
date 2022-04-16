@@ -193,7 +193,7 @@ border-top: 0.6px solid #0052ff;
 .slidew{
 width: 100%;
 overflow: hidden;
-margin-top: 30px;
+margin-top: 10px;
 }
 
 .slide{
@@ -299,8 +299,7 @@ overflow: hidden;
         <div class="nav-menu nav-menu2">
             <div><a href="{% url 'index' %}">Home</a></div>
             <div><a href="{% url 'services' %}">Invest</a></div>
-            <div><a href="{% url 'selectcoin' %}">Deposit</a></div>
-            <div><a href="{% url 'withdraw' %}">Withdraw</a></div>
+            <div><a href="{% url 'btcwithdraw' %}">Withdraw</a></div>
             <div><a href="{% url 'about' %}">About</a></div>
             <div><a href="https://t.me/JACKSON_FXT">Support</a></div>
             <div> <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">Logout</a>
@@ -348,14 +347,14 @@ overflow: hidden;
     
 <div class="transaction">
   <a href="{% url 'services' %}">Invest</a>
-  <a href="{% url 'withdraw' %}">Withdraw</a>
+  <a href="{% url 'btcwithdraw' %}">Withdraw</a>
 </div>
 
 
-<div class="live" style="color: #0E86D4; width: 100%; display: flex; align-items: center; justify-content: center; padding: 30px;">
-  <h2>
+<div class="live" style="color: #0E86D4; width: 100%; display: flex; align-items: center; justify-content: center; padding: 10px; padding-top: 30px;">
+  <h1>
     Live Trade
-  </h2>
+  </h1>
 </div>
 
 <!-- TradingView Widget BEGIN -->

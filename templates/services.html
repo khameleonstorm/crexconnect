@@ -32,6 +32,8 @@ font-weight: 800;
 color: #363a41;
 line-height: 0.96;
 }
+
+
 h2{
 font-size: 21px;
 font-weight: 800;
@@ -254,14 +256,9 @@ width: 100%;
 .invest{
 padding-top: 50px;
 text-align: center;
-padding-bottom: 30px;
 }
 
-.invest h2{
-padding-top: 20px;
-font-size: 1.1rem;
-padding-bottom: 30px;
-}
+
 .invest h1{
 font-size: 2rem;
 line-height: 1.5;
@@ -368,6 +365,7 @@ transition: all 0.7s ease-in-out;
 
 .header h1{
 font-size: 1.5rem;
+padding-bottom: 7px
 }
 
 .nav-menu {
@@ -807,7 +805,7 @@ padding-top: 0px;
 
 
 <section class="fourth">
-    <div class="farm"><h1 style="font-family: cursive;">Invest in stocks and get good ROIs</h1></div>
+    <div class="farm"><h1 style="font-family: cursive;">Invest and earn %100 on the return of your investment (ROI) capital at the end of each trade section</h1></div>
     <div class="farm-plans">
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 3.2s;">
             <h3>Apple</h3><br>
@@ -815,7 +813,7 @@ padding-top: 0px;
             <h4>APY</h4> <P>80%</P><br>
             <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositbtc' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
@@ -826,7 +824,7 @@ padding-top: 0px;
             <h4>APY</h4> <P>70%</P><br>
             <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositeth' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
@@ -837,7 +835,7 @@ padding-top: 0px;
             <h4>APY</h4> <P>60%</P><br>
             <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositbnb' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
@@ -848,7 +846,7 @@ padding-top: 0px;
             <h4>APY</h4> <P>40%</P><br>
             <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositsol' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
@@ -864,12 +862,12 @@ padding-top: 0px;
     <div class="investment-plans">
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 7.2s;">
             <h3>Beginner</h3>
-            <p>Minimum-$300</p>
-            <p>Maximum-$1000</p>
+            <p>Minimum-$100</p>
+            <p>Maximum-$900</p>
             <p>Returns-100%</p>
-            <p>Duration-72 Hours</p>
+            <p>Duration-48 Hours</p>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositusdt' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
@@ -877,35 +875,35 @@ padding-top: 0px;
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 8.2s;">
             <h3>Standard</h3>
             <p>Minimum-$1000</p>
-            <p>Maximum-$15000</p>
-            <p>Returns-60%</p>
-            <p>Duration-5 Days</p>
+            <p>Maximum-$5000</p>
+            <p>Returns-200%</p>
+            <p>Duration-72 Hours</p>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositusdt' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 9.2s;">
             <h3>Professional</h3>
-            <p>Minimum-$2500</p>
-            <p>Maximum-$12000</p>
-            <p>Returns-70%</p>
+            <p>Minimum-$5100</p>
+            <p>Maximum-$10000</p>
+            <p>Returns-300%</p>
             <p>Duration-5 Days</p>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositusdt' %}">Start Now</a>
+            <a href="{% url 'selectcoin' %}">Start Now</a>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 10.2s;">
             <h3>Ultimate</h3>
-            <p>Minimum-$1000</p>
-            <p>Maximum-$100000</p>
-            <p>Returns-150%</p>
-            <p>Duration-5 Days</p>
+            <p>Minimum-$11000</p>
+            <p>Maximum-$50000</p>
+            <p>Returns-400%</p>
+            <p>Duration-7 Days</p>
             {% if user.is_authenticated  %}
-            <a href="{% url 'depositusdt' %}">Start Now</a> </b>
+            <a href="{% url 'selectcoin' %}">Start Now</a> </b>
             {% else %}
             <a href="{% url 'signin' %}">Start Now</a>
             {% endif %}
@@ -914,6 +912,11 @@ padding-top: 0px;
 </section>
 
 <section class="down-chart">
+  <div class="live" style="color: #0E86D4; width: 100%; display: flex; align-items: center; justify-content: center; padding: 10px; padding-top: 30px;">
+    <h1 style="color: #0E86D4;">
+      Live Trade
+    </h1>
+  </div>
   <div class="tradingview-widget-container">
       <div id="tradingview_25ca8"></div>
       <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>

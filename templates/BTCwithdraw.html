@@ -19,6 +19,12 @@ list-style: none;
 text-decoration: none;
 }
 
+body{
+width: 100%;
+height: 100vh;
+background: rgba(201, 200, 200, 0.233);
+}
+
 .header{
 border-bottom: 1px solid #aeb0b3;
 background: whitesmoke;
@@ -95,10 +101,30 @@ margin: 3px;
 margin-bottom: 7px;
 }
 
+#network{
+background-color: transparent;
+padding: 10px;
+border-radius: 25px;
+border: 0.5px solid #6f9fd6;
+margin: 3px;
+margin-bottom: 7px;
+}
+
+#coin{
+background-color: transparent;
+padding: 10px;
+border-radius: 25px;
+border: 0.5px solid #6f9fd6;
+margin: 3px;
+margin-bottom: 7px;
+}
+
+
+
 .card-details{
 padding: 15px;
 margin-bottom: 20px;
-background-color: rgba(201, 200, 200, 0.233);
+background: rgba(201, 200, 200, 0.233);
 }
 
 h2{
@@ -146,9 +172,11 @@ padding: 20px;
 padding-top: 20px;
 padding-bottom: 20px;
 }
+
 .partners div{
 width: 20%;
 }
+
 .partners img{
 width: 100%;
 }
@@ -192,9 +220,14 @@ color: #475569;
 
 .wrap{
 width: 90%;
-background-color: whitesmoke;
+background: whitesmoke;
 padding: 10px;
 font-size: 0.8rem;
+}
+
+.wrapper{
+margin-top: 120px;
+margin-bottom: 120px;
 }
 
 .button{
@@ -326,8 +359,8 @@ display: none;
   <div class="wrapper">
       <div class="wrap">
         <div class="card-details">
-            <h2>Enter your <b>Bitcoin(BTC) wallet address</b> </h2>
-            <p>Please note that any mistake in the form below might result to permanent loss of coin.</p>
+            <h2>Enter your Wallet address</h2>
+            <p>Ensure the network matches the Withdrawal address and the deposit platform support it.</p>
         </div>
         
           <form method="POST" action="{% url 'btcwithdraw' %}">
@@ -338,7 +371,23 @@ display: none;
 
             <input type="number" placeholder="Amount in USD" size="40" name="amount" required><br>
 
-            <input type="text" placeholder="Bitcoin Wallet Address" size="40" name="wallet" required><br>
+            <select id="network" name="network">
+                <option value="BTC">BTC</option>
+                <option value="ERC20">ERC20</option>
+                <option value="BEP20">BEP20</option>
+                <option value="TRC20">TRC20</option>
+                <option value="Solana">Solana</option>
+            </select>
+
+            <select id="coin" name="coin">
+                <option value="Bitcoin">Bitcoin</option>
+                <option value="Tether">Tether</option>
+                <option value="Ethereum">Ethereum</option>
+                <option value="BNB">Binance Coin</option>
+                <option value="Solana">Solana</option>
+            </select>
+
+            <input type="text" placeholder="Wallet Address" size="40" name="wallet" required><br>
 
             <input type="submit" value="Withdraw" class="button">
 
