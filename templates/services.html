@@ -14,7 +14,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: cursive;
 }
 
 a{
@@ -707,19 +707,19 @@ padding-top: 0px;
 <body>
     <header class="header">
         <nav class="navbar">
-                <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff;">CrexConnect</h1></a>
+                <a href="{% url 'index' %}" class="nav-logo"><h1 style="color: #0052ff; font-family: Verdana, Geneva, Tahoma, sans-serif;">CrexConnect</h1></a>
             <ul class="nav-menu nav-menu2">
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'services' %}" class="nav-link">Services</a>
+                    <a href="{% url 'services' %}" class="nav-link">Invest</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://t.me/CrexSupport" class="nav-link">Contact</a>
+                    <a href="https://t.me/JACKSON_FXT" class="nav-link">Contact</a>
                 </li>
                 {% if user.is_authenticated  %}
                 <li class="nav-item">
@@ -805,98 +805,15 @@ padding-top: 0px;
     </div>
     </section>
 
-<section class="trade">
-    <div class="pointer-image">
-        <img src="https://images2.imgbox.com/cb/3d/YZS3fhVr_o.png" alt="pointer image">
-    </div>
-    
-    <div class="trade-wrap">
-        <div><h1>Start your crypto journey</h1></div>
-        <div><h2>CrexConnect is the safest and easiest broker to buy crypto and invest.</h2></div>
-        <div><p>click to begin</p></div>
-        <div><img class="pointer-emoji animate__animated animate__shakeY animate__delay-1s animate__infinite animate__slower" src="https://emojigraph.org/media/facebook/backhand-index-pointing-down-medium-dark-skin-tone_1f447-1f3fe.png"></div>
-        {% if user.is_authenticated  %}
-        <div><a href="{% url 'dashboard' %}">Trade</a></div>
-        {% else %}
-        <div><a href="{% url 'signin' %}">Trade</a></div>
-        {% endif %}
-    </div>
-</section>
-
-
-<section class="first-chart">
-
-    <div class="look">
-        <h1>Look before diving in</h1>
-        <p>You're probably excited to start your crypto journey but we strongly advice individual traders via the path of proper analysis. We'   ve provided you with the best tools for Technical Analysis , no worries we' ve  got it all covered <p>
-        <a href="https://www.tradingview.com/crypto-screener/">View more</a>
-    </div> 
-</section>
-
-<section class="down-chart">
-    <div class="tradingview-widget-container">
-        <div id="tradingview_25ca8"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-        new TradingView.MediumWidget(
-        {
-        "symbols": [
-          [
-            "Apple",
-            "AAPL"
-          ],
-          [
-            "Google",
-            "GOOGL"
-          ],
-          [
-            "Microsoft",
-            "MSFT"
-          ],
-          [
-            "Bitcoin",
-            "COINBASE:BTCUSD|12M"
-          ],
-          [
-            "Gold",
-            "OANDA:XAUUSD|12M"
-          ]
-        ],
-        "chartOnly": false,
-        "width": "100%",
-        "height": "100%",
-        "locale": "en",
-        "colorTheme": "light",
-        "gridLineColor": "rgba(164, 194, 244, 0)",
-        "fontColor": "#787B86",
-        "isTransparent": false,
-        "autosize": true,
-        "showFloatingTooltip": true,
-        "showVolume": true,
-        "scalePosition": "no",
-        "scaleMode": "Normal",
-        "fontFamily": "Trebuchet MS, sans-serif",
-        "noTimeScale": false,
-        "chartType": "area",
-        "lineColor": "#2962FF",
-        "bottomColor": "rgba(41, 98, 255, 0)",
-        "topColor": "rgba(41, 98, 255, 0.3)",
-        "container_id": "tradingview_25ca8"
-      }
-        );
-        </script>
-      </div>
-</section>
 
 <section class="fourth">
-    <div class="farm"><h1>Farm while you hodl your crypto and enjoy great returns on APY</h1><h2>Stake the listed coins and harvest when staking duration is over.</h2></div>
+    <div class="farm"><h1 style="font-family: cursive;">Invest in stocks and get good ROIs</h1></div>
     <div class="farm-plans">
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 3.2s;">
-            <h3>Bitcoin </h3><br>
-            <h4>Stake Min:</h4> <p>$3000</p><br>
+            <h3>Apple</h3><br>
+            <h4>Min:</h4> <p>$3000</p><br>
             <h4>APY</h4> <P>80%</P><br>
-            <h4>Stake Duration</h4> <p>30 Days</p><br>
+            <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
             <a href="{% url 'depositbtc' %}">Start Now</a>
             {% else %}
@@ -904,10 +821,10 @@ padding-top: 0px;
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 4.2s;">
-            <h3>Ethereum </h3><br>
-            <h4>Stake Min:</h4> <p>$2500</p><br>
+            <h3>Google </h3><br>
+            <h4>Min:</h4> <p>$2500</p><br>
             <h4>APY</h4> <P>70%</P><br>
-            <h4>Stake Duration</h4> <p>30 Days</p><br>
+            <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
             <a href="{% url 'depositeth' %}">Start Now</a>
             {% else %}
@@ -915,10 +832,10 @@ padding-top: 0px;
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 5.2s;">
-            <h3>BNB </h3><br>
-            <h4>Stake Min:</h4> <p>$2000</p><br>
+            <h3>Microsoft</h3><br>
+            <h4>Min:</h4> <p>$2000</p><br>
             <h4>APY</h4> <P>60%</P><br>
-            <h4>Stake Duration</h4> <p>30 Days</p><br>
+            <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
             <a href="{% url 'depositbnb' %}">Start Now</a>
             {% else %}
@@ -926,10 +843,10 @@ padding-top: 0px;
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 6.2s;">
-            <h3>Solana </h3><br>
-            <h4>Stake Min:</h4> <p>$1000</p><br>
+            <h3>Gold </h3><br>
+            <h4>Min:</h4> <p>$1000</p><br>
             <h4>APY</h4> <P>40%</P><br>
-            <h4>Stake Duration</h4> <p>30 Days</p><br>
+            <h4>Duration</h4> <p>30 Days</p><br>
             {% if user.is_authenticated  %}
             <a href="{% url 'depositsol' %}">Start Now</a>
             {% else %}
@@ -942,11 +859,11 @@ padding-top: 0px;
 
 <section class="fifth">
     <div class="invest">
-        <h1>Invest in stocks and get good ROIs at the end of each trade</h1>
+        <h1 style="font-family: cursive;">Investment Plans</h1>
     </div>
     <div class="investment-plans">
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 7.2s;">
-            <h3>Apple</h3>
+            <h3>Beginner</h3>
             <p>Minimum-$300</p>
             <p>Maximum-$1000</p>
             <p>Returns-80%</p>
@@ -958,7 +875,7 @@ padding-top: 0px;
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 8.2s;">
-            <h3>Google</h3>
+            <h3>Standard</h3>
             <p>Minimum-$1000</p>
             <p>Maximum-$15000</p>
             <p>Returns-60%</p>
@@ -970,7 +887,7 @@ padding-top: 0px;
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 9.2s;">
-            <h3>Microsoft</h3>
+            <h3>Professional</h3>
             <p>Minimum-$2500</p>
             <p>Maximum-$12000</p>
             <p>Returns-70%</p>
@@ -982,7 +899,7 @@ padding-top: 0px;
             {% endif %}
         </div>
         <div class="animate__animated animate__flipInY animate__delay-s" style="animation-delay: 10.2s;">
-            <h3>Gold</h3>
+            <h3>Ultimate</h3>
             <p>Minimum-$1000</p>
             <p>Maximum-$100000</p>
             <p>Returns-150%</p>
@@ -995,6 +912,63 @@ padding-top: 0px;
         </div>
     </div>
 </section>
+
+<section class="down-chart">
+  <div class="tradingview-widget-container">
+      <div id="tradingview_25ca8"></div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+      new TradingView.MediumWidget(
+      {
+      "symbols": [
+        [
+          "Apple",
+          "AAPL"
+        ],
+        [
+          "Google",
+          "GOOGL"
+        ],
+        [
+          "Microsoft",
+          "MSFT"
+        ],
+        [
+          "Bitcoin",
+          "COINBASE:BTCUSD|12M"
+        ],
+        [
+          "Gold",
+          "OANDA:XAUUSD|12M"
+        ]
+      ],
+      "chartOnly": false,
+      "width": "100%",
+      "height": "100%",
+      "locale": "en",
+      "colorTheme": "light",
+      "gridLineColor": "rgba(164, 194, 244, 0)",
+      "fontColor": "#787B86",
+      "isTransparent": false,
+      "autosize": true,
+      "showFloatingTooltip": true,
+      "showVolume": true,
+      "scalePosition": "no",
+      "scaleMode": "Normal",
+      "fontFamily": "Trebuchet MS, sans-serif",
+      "noTimeScale": false,
+      "chartType": "area",
+      "lineColor": "#2962FF",
+      "bottomColor": "rgba(41, 98, 255, 0)",
+      "topColor": "rgba(41, 98, 255, 0.3)",
+      "container_id": "tradingview_25ca8"
+    }
+      );
+      </script>
+    </div>
+</section>
+
 
 <footer>
     <div class="partners">

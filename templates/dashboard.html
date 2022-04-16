@@ -240,8 +240,19 @@ padding-right: 9px;
 }
 
 .figures{
-width: 95%;
-margin-bottom: 18px;
+width: 98%;
+height: 120px;
+margin-bottom: 10px;
+border-radius: 15px;
+overflow: hidden;
+}
+
+.figures img{
+width: 18%;
+position: relative;
+left: 290px;
+bottom: 60px;
+opacity: 40%;
 }
 
 .transaction a{
@@ -287,11 +298,11 @@ overflow: hidden;
             <a href="{% url 'index' %}" class="nav-logo"><h1>Hello! {{user.first_name}}</h1></a>
         <div class="nav-menu nav-menu2">
             <div><a href="{% url 'index' %}">Home</a></div>
-            <div><a href="{% url 'services' %}">Services</a></div>
-            <div><a href="{% url 'dashboard' %}">Deposit</a></div>
-            <div><a href="{% url 'selectcoin' %}">Withdraw</a></div>
+            <div><a href="{% url 'services' %}">Invest</a></div>
+            <div><a href="{% url 'selectcoin' %}">Deposit</a></div>
+            <div><a href="{% url 'withdraw' %}">Withdraw</a></div>
             <div><a href="{% url 'about' %}">About</a></div>
-            <div><a href="https://wa.me/message/ZEUPQALSTYBWH1">Support</a></div>
+            <div><a href="https://t.me/JACKSON_FXT">Support</a></div>
             <div> <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">Logout</a>
               <form action="{% url 'logout' %}" method="POST" id="logout">
                 {% csrf_token %}
@@ -312,23 +323,23 @@ overflow: hidden;
 
 <section class="account">
     <div class="figures">
-      <p>Portfolio Balance</p>
-      <h1>${{user.balance.balance|default:"0"}}</h1>
+      <p>Current Investment</p>
+      <h1>${{user.Balance.investment|default:"0"}}</h1>
       <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
     <div class="figures">
-      <p>Current Deposit</p>
-      <h1>${{user.balance.deposit|default:"0"}}</h1>
+      <p>Current Returns</p>
+      <h1>${{user.Balance.returns|default:"0"}}</h1>
       <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
     <div class="figures">
-      <p>Staked Earnings</p>
-      <h1>${{user.balance.staked|default:"0"}}</h1>
+      <p>Withdrawal Balance</p>
+      <h1>${{user.Balance.withdrawb|default:"0"}}</h1>
       <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
     <div class="figures">
-      <p>Investment Earnings</p>
-      <h1>${{user.balance.investment|default:"0"}}</h1>
+      <p>Total Withdrawal</p>
+      <h1>${{user.Balance.twithdraw|default:"0"}}</h1>
       <img src="https://www.pngall.com/wp-content/uploads/10/Tether-Crypto-Logo-PNG-Clipart.png" alt="tether">
     </div>
 
@@ -336,10 +347,16 @@ overflow: hidden;
 
     
 <div class="transaction">
-  <a href="{% url 'selectcoin' %}">Deposit</a>
+  <a href="{% url 'services' %}">Invest</a>
   <a href="{% url 'withdraw' %}">Withdraw</a>
 </div>
 
+
+<div class="live" style="color: #0E86D4; width: 100%; display: flex; align-items: center; justify-content: center; padding: 30px;">
+  <h2>
+    Live Trade
+  </h2>
+</div>
 
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container slidew">

@@ -45,10 +45,10 @@ class Deposits(models.Model):
 
 class Balance(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    balance = models.IntegerField(blank=True, default='0',)
-    deposit = models.IntegerField(blank=True, default='0',)
-    staked = models.IntegerField(blank=True, default='0',)
     investment = models.IntegerField(blank=True, default='0',)
+    returns = models.IntegerField(blank=True, default='0',)
+    withdrawb = models.IntegerField(blank=True, default='0',)
+    twithdraw = models.IntegerField(blank=True, default='0',)
     # active_deposit = models.IntegerField(blank=True, default='0',)
     # deposit_date = models.DateTimeField(auto_now_add=True)
     username = models.CharField(max_length=100, blank=True, default='0',)
