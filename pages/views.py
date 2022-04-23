@@ -19,7 +19,6 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
-@login_required
 def dashboard(request):
     if request.user.is_authenticated:
         balance = Balance.objects.all()
