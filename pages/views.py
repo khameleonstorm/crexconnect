@@ -21,8 +21,11 @@ def services(request):
 
 @login_required
 def dashboard(request):
-    balance = Balance.objects.all()
-    return render(request, 'dashboard.html', {'balance': balance})
+    if request.user.is_authenticated:
+        balance = Balance.objects.all()
+        return render(request, 'dashboard.html', {'balance': balance})
+    else:
+        return redirect('signin')
 
  #   else:
   #      return redirect('signin')
