@@ -6,9 +6,7 @@ from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import send_mail
-
-
-from .models import Contact, Bitcoin, Card
+from .models import Balance, Card
 
 
 # Create your views here.
@@ -21,24 +19,11 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
-def contact(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        country = request.POST['country']
-        phone = request.POST['phone']
-        message = request.POST['message']
-
-        contact = Contact(name=name, email=email, country=country, message=message, phone=phone)
-
-        contact.save()
-        # return redirect('contacts')
-
-    return render(request, 'contact.html')
-
+@login_required
 def dashboard(request):
- #   if request.user.is_authenticated:
-        return render(request, 'dashboard.html')
+    balance = Balance.objects.all()
+    return render(request, 'dashboard.html', {'balance': balance})
+
  #   else:
   #      return redirect('signin')
 
@@ -84,9 +69,6 @@ def depositsol(request):
     else:
         return redirect('signin')
 
-
-def forgot(request):
-    return render(request, 'forgot.html')
 
 def signin(request):
     if request.user.is_authenticated:
