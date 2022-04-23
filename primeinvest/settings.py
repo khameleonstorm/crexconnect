@@ -15,7 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i!b2!x&oo*8r2y!n#vfp@jworye#hd6ocdv5qo(!^sau((pj2h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -129,11 +129,11 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-# import django_heroku
-# django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
 
 # DEBUG_PROPAGATE_EXCEPTIONS = True
 # COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
