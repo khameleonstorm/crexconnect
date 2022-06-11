@@ -124,9 +124,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-import django_heroku
-django_heroku.settings(locals())
-
 # DEBUG_PROPAGATE_EXCEPTIONS = True
 # COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
