@@ -65,9 +65,9 @@ WSGI_APPLICATION = 'primeinvest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btre_prod',
-        'USER': 'dbadmin',
-        'PASSWORD': 'abc123!',
+        'NAME': 'crexdb',
+        'USER': 'crexadmin',
+        'PASSWORD': '3099545689Vv++',
         'HOST': 'localhost',
      }
  }
