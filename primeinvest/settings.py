@@ -113,16 +113,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'primeinvest/static')
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-# WHITENOISE_AUTOREFRESH = True
-
-from django.contrib.messages import constants as messages
-
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-}
 
 # DEBUG_PROPAGATE_EXCEPTIONS = True
 # COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
