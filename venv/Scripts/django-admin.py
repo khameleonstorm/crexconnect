@@ -1,4 +1,4 @@
-#!C:\Users\ACER\Desktop\crex-connect\venv\Scripts\python.exe
+#!C:\Users\USER\desktop\crexconnect\venv\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":
